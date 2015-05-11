@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.UserRechargeMapper" >
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.UserRecharge" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="chargeDate" property="chargedate" jdbcType="TIMESTAMP" />
+    <result column="chargeMoney" property="chargemoney" jdbcType="DOUBLE" />
+    <result column="chargeToAccount" property="chargetoaccount" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, chargeDate, chargeMoney, chargeToAccount, state, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_userrecharge
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_userrecharge
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cyl.bean.pojo.UserRecharge" >
+    insert into tb_userrecharge (id, userid, chargeDate, 
+      chargeMoney, chargeToAccount, state, 
+      remark)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{chargedate,jdbcType=TIMESTAMP}, 
+      #{chargemoney,jdbcType=DOUBLE}, #{chargetoaccount,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.UserRecharge" >
+    insert into tb_userrecharge
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="chargedate != null" >
+        chargeDate,
+      </if>
+      <if test="chargemoney != null" >
+        chargeMoney,
+      </if>
+      <if test="chargetoaccount != null" >
+        chargeToAccount,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="chargedate != null" >
+        #{chargedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="chargemoney != null" >
+        #{chargemoney,jdbcType=DOUBLE},
+      </if>
+      <if test="chargetoaccount != null" >
+        #{chargetoaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyl.bean.pojo.UserRecharge" >
+    update tb_userrecharge
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="chargedate != null" >
+        chargeDate = #{chargedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="chargemoney != null" >
+        chargeMoney = #{chargemoney,jdbcType=DOUBLE},
+      </if>
+      <if test="chargetoaccount != null" >
+        chargeToAccount = #{chargetoaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyl.bean.pojo.UserRecharge" >
+    update tb_userrecharge
+    set userid = #{userid,jdbcType=INTEGER},
+      chargeDate = #{chargedate,jdbcType=TIMESTAMP},
+      chargeMoney = #{chargemoney,jdbcType=DOUBLE},
+      chargeToAccount = #{chargetoaccount,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

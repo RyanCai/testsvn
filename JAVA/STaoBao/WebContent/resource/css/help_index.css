@@ -1,0 +1,152 @@
+﻿@charset "utf-8";
+.btn_blue_x{display:inline-block;width:60px;height:33px;background:url(img/bg_repeat.png) repeat-x 0 -187px\9;background:-moz-linear-gradient(top,#ffffff,#f5f5f5);background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#ffffff), to(#f5f5f5), color-stop(0.5,#fcfcfc));border:1px solid #ccc;color:#333 !important;text-decoration:none !important;cursor:pointer;border-radius:2px;text-align:center;font-size:12px;}
+.faq_main{border:1px solid #dcdcdc;width: 978px;margin: 0 auto 10px; background-color:#FFFFFF;overflow: hidden;position: relative;}
+.left{float:left;width:189px;position:relative;}
+.right{width:788px;float:right;background:#fff;border-left:1px solid #ebebeb;margin:2px 0;}
+.right h2{height:30px;line-height:30px;font-size:14px;border-bottom:2px solid #ebebeb;position:relative;padding:10px 0 8px;margin:0 25px;}
+.right h2 .more{position:absolute;right:0;top:10px;font-weight:normal;z-index:2;font-size:12px;display:block;color:#999;}
+.right h2 .more a{color:#999;}
+.container{margin:0 auto;/*border:1px solid #ebebeb;*/min-height:400px;_height:400px;zoom:1;}
+.bg_color_gray{background:#fff;}
+.font_14{font-size:14px;}
+/*faq页面*/
+.porduct_logo{padding:8px 10px;font-size:14px;/*border-bottom:1px solid #ddd;*/height:58px;}
+.porduct_logo img{width:58px;height:55px;}
+.porduct_logo h5{ margin-top:7px;}
+.faq_kind{border-top:1px solid #fff;margin-bottom:8px;font-size:14px;width:200px;padding-top:5px;}
+.faq_kind_height{height:398px;_height:402px;}
+/*.faq_kind ul{padding-left:5px;}
+.faq_kind ul li{height:31px;line-height:31px;float:left;width:190px;position:relative;}
+.faq_kind a{width:180px;padding-left:15px;position:absolute;display:block;clear:both;text-decoration:none;float:left;}*/
+.faq_kind{padding-bottom:30px;width:188px;overflow:visible;position:absolute;right:-1px;margin-top:-2px;left:0;}
+.faq_kind li{_position:relative;_margin-top:-3px;margin-bottom:1px;}
+.faq_kind li,.faq_kind li a{display:block;width:188px;height:38px;}
+.faq_kind a{font-size:14px;text-indent:14px;line-height:37px;padding-left: 20px;_position:absolute;_top:0;_left:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+/*.faq_kind a:link {}
+.faq_kind a:visited {text-decoration:none;}
+.faq_kind a:hover {background:url(img/faq_li_bg.png) no-repeat left 0 #fff;border-left:1px solid #acbfd0;border-top:1px solid #acbfd0;border-bottom:1px solid #acbfd0;font-weight:bold;}
+.faq_kind a:active {border-bottom:1px solid #acbfd0;}*/
+/*.faq_kind a.li_active{background:url(img/faq_li_bg.png) no-repeat left 0 #fff;border-left:1px solid #acbfd0;border-top:1px solid #acbfd0;border-bottom:1px solid #acbfd0;font-weight:bold;}*/
+.faq_kind a.li_active,.faq_kind a:hover{width:200px;height:43px;line-height:37px;font-weight:bold;color:#fff;background:url(img/bg_faq_nav.gif) no-repeat 0 0;}
+.faq_list ol{height:470px;	}
+.faq_list ol li{font-size:14px;line-height:38px;border-bottom:1px dashed #cccccc;}
+.faq_list ol li em{float: right;}
+.faq_content{width:720px;margin:0 auto;font-size:14px;padding:10px 0;line-height:1.6;color:#555D63;}
+.faq_content a:link, .faq_content a:visited {color:#228ada;text-decoration:underline;}
+.faq_content a:active,.faq_content a:hover {color:#000;text-decoration:underline;}
+.faq_content h3{font-weight:bold;font-size:14px;color:#555;padding-top:10px;}
+.faq_content_height{min-height:563px;_height:563px;}
+.faq_content_add{width:720px;margin:30px auto;font-size:12px;padding:15px 0;}
+.faq_content_add h3{font-size:14px;margin-bottom:6px;}
+.faq_selcet{padding:7px 0;}
+.h3_title{padding-bottom:10px;}
+.faq_other{margin-left:0px;}
+.faq_other li{line-height:22px;margin-bottom:4px;}
+.faq_other li a{color:#3C8CC8;}
+.border_top{border-top:1px dashed #cccccc;margin-top:5px;}
+/*===常见问题页面======*/
+.help_imp_bg{background:url(img/help_bg.png) no-repeat 0;width:904px;height:192px;padding:0px 3px;}
+.producut_list {width:908px;margin-top:10px;border:#bcd6e8 1px solid;font-size:14px;}
+.producut_list dt{background:#e9f4fc;height:25px; padding-top:5px;}
+.producut_list dt span{color:#1f376d;font-weight:bold;padding:4px 0 0 38px;}
+.producut_list .line1,.producut_list .line2,.producut_list .line3,.producut_list .line4,.producut_list .line5{background:url(img/help_icon.gif) no-repeat;}
+.producut_list .line1{background-position:10px 0px;}
+.producut_list .line2{background-position:10px -42px;}
+.producut_list .line3{background-position:10px -85px;}
+.producut_list .line4{background-position:10px -133px;}
+.producut_list .line5{background-position:10px -177px;}
+.producut_list dd{margin:10px 12px;line-height:25px;}
+.producut_list dd a{color:#1f376d;margin-right:12px;padding:2px 1px 1px 1px;}
+.producut_list dd a.key_purple{color:#f832a9;}
+.producut_list dd a:hover{background:#509ad8;color:#FFFFFF;text-decoration:none;padding:2px 1px 1px 1px;}
+/*左右结构==s*/
+.width_110{	width:100px;}/*=ics用户信息宽度=*/
+.c_img_left{float:left;text-align:right;}
+.c_img_right{float:right;}
+.c_img_right h5{padding-bottom:5px;font-size:14px;font-weight:bold;}
+.c_img_right p{color:#868686;}
+.c_img_right button{margin-top:7px;}
+.c_img_right ul{margin-top:5px;}
+.c_img_right li{background:url(img/li_square.gif) no-repeat 2px 9px;padding-left:12px;list-style:none;}
+.content_img_hr{background:url(img/content_hr.png) no-repeat 0 5px;width:auto;height:10px;border:none;}
+.content_single{width:760px; margin:0 auto;padding:15px 0;}
+.content_single .content_left,.content_single .content_right{width:340px;}
+.content_single .c_img_left{width:60px;}
+.content_single .c_img_right{width:260px;}
+.help_imp_img{width:184px;float:left;margin:23px 21px 5px;}
+.help_imp_img h5{padding-top:8px;}
+.help_imp_img p{padding-top:2px;}
+.help_imp_img .c_img_right{width:115px;}
+.hr{margin:0 auto;background:url(img/hr.png) no-repeat 0;width:850px;height:1px;font-size:0px;}
+/*左右结构==e*/
+/*底部分页==s*/
+.page_help{clear: both;overflow: hidden;height: 40px;line-height: 40px;text-align: center;padding-top:30px;padding-bottom: 20px;}
+/*底部分页==e*/
+/*表单结构==s*/
+.frameset,.content{margin:0 auto;padding:10px 25px;text-align:left; }
+.ics_form{padding:10px 0px;width:680px;overflow:hidden;_overflow:visible;}
+.width_650{padding:10px 0px;width:650px;}
+.width_450{width:430px; float:left;}
+.frameset h3{padding:8px 10px;text-align:left;color:#FF0000;}
+.frameset ul{margin:0 auto; }
+.frameset ul li{line-height:25px;_height:25px;clear:both;display:inherit;text-align:left;}
+.frameset em{color:#FF0000;padding:0 3px;}
+.frameset ul p{color:#808080;clear:both;padding-left:234px;line-height:19px;padding-bottom:3px;}
+.frameset label{float:left;margin-right:2px;width:230px;text-align:right;}
+.frameset ul ul{padding:0; >margin-top:-25px;}
+.frameset ul li li{margin-left:230px;clear:none;}
+.frameset ul li li label{padding-left:3px;float:none;}
+.frameset .code{margin-top:4px;}
+.frameset ul li.form_tips{position:relative;z-index:1; width:680px;}
+.frameset li.form_tips .form_title{width:250px; float:left; display:block;}
+.frameset li.form_tips .change{position:absolute;top:0px;>top:-2px;right:80px;z-index:2;}
+/*form_tips tips_info选择问题错误提示*/
+.frameset li.form_tips .tips_info{position:absolute;top:0px;left:500px;padding-left:20px;z-index:3;}
+/*form_tips tips_info2选择问题错误提示*/
+.frameset li.form_tips .tips_info2{position:absolute;top:0px;left:440px;padding-left:20px;z-index:3;}
+.frameset .ipt_textarea{ margin-top:4px;}
+.frameset_add{}
+.frameset_add ul{margin:0 auto;}
+.frameset_add ul li{line-height:30px;_height:30px;clear:both;display:inherit;text-align:left;}
+.frameset_add ul p{color:#808080;clear:both;padding-left:84px;}
+.frameset_add label{float:left;margin-right:2px;width:80px;text-align:right;}
+.iframe{margin:0 auto;text-align:center;}
+.role p{line-height:23px;color:#666666;}
+.ipt_text_em{border:1px solid #d40000; background:#f8e7e5;width:200px;_width:204px;font-size:12px;}
+.use_pd_info li input{margin-right:2px;}
+/*常见问题*/
+.faq{margin:10px 0;}
+.faq h2{margin:0 10px 10px;font-weight:normal;}
+.faq .icon_faq{vertical-align:middle;margin-right:5px;}
+.kinds_cont{overflow:hidden;}
+.faq_kinds{padding-bottom:30px;width:188px;border-right:1px solid #ebebeb;overflow:visible;float:left;}
+.faq_kinds li{_position:relative;_margin-top:-3px;}
+.faq_kinds li,.faq_kinds li a{display:block;width:188px;height:38px;}
+.faq_kinds li a{font-size:14px;text-indent:14px;line-height:37px;_position:absolute;_top:0;_left:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.faq_kinds li a.on,.faq_kinds li a:hover{width:200px;height:43px;line-height:37px;font-weight:bold;color:#fff;background:url(img/bg_faq_nav.gif) no-repeat 0 0;}
+.faq_cont{margin:7px 20px 0 220px;zoom:1;margin-right:35px\9;_width:460px;_margin-left:30px;_float:left;_margin-right:10px}
+.faq_cont ul {margin-bottom:30px;}
+.faq_cont ul li{margin-bottom:15px;font-size:14px;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;list-style-type:disc;list-style-position:inside;color:#aaa;font-size:12px;}
+.faq_cont ul li a{margin-left:0;font-size:14px;color:#3c8cc8;}
+.faq_cont ul li a:hover{color:#333;}
+.faq_detail{padding:0 15px;}
+.location{margin:0 0 10px;}
+.location a,.related ul li a{color:#3c8cc8;}
+.location a:hover,.related ul li a:hover{color:#999;}
+.detail{margin-bottom:50px;/*padding:15px;background:#f8f8f8;*/}
+.detail .title{font-size:24px;font-weight:normal;padding-bottom:10px;border-bottom:1px solid #ebebeb;margin-bottom:15px;}
+.detail p{font-size:14px;color:#555555;line-height:28px;margin-bottom:1.7em;}
+.detail a{color:#4a9ee8;text-decoration:underline;}
+.detail .kf_mod_tips{margin-top:30px;}
+.related{margin-bottom:66px;}
+.related h4{font-size:14px;margin-bottom:10px;}
+.related ul li{margin-bottom:8px;}
+.related .dot{color:#999;margin-right:6px;}
+a{text-decoration:none;}
+a:hover{color:#3DC054;text-decoration:none;}
+a:focus{/*outline:none;*/}
+.hot_img{width:12px;height:10px;vertical-align:-1px;margin-left:5px;}
+/*== main主内容区 ==*/
+.con{padding-bottom:30px;width:708px;overflow:hidden;float:left;_display:inline;}
+.aside{width:268px;padding-bottom:117px;_display:inline;}
+.wrap-cont{ padding-top:10px;font: 12px/1.6 "微软雅黑","宋体";}

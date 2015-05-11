@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.UserDeliveryAddressMapper" >
+
+  <resultMap id="BaseResultMap" type="UserDeliveryAddress" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="personname" property="personname" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="mail" property="mail" jdbcType="VARCHAR" />
+    <result column="tell" property="tell" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="INTEGER" />
+    <result column="city" property="city" jdbcType="INTEGER" />
+    <result column="sysstate" property="sysstate" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, userid, personname, phone, mail, tell, country, province, city, sysstate, state, 
+    remark, address
+  </sql>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_userdeliveryaddress
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_userdeliveryaddress
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="UserDeliveryAddress" >
+    insert into tb_userdeliveryaddress (id, userid, personname, 
+      phone, mail, tell, 
+      country, province, city, 
+      sysstate, state, remark, 
+      address)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{personname,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{mail,jdbcType=VARCHAR}, #{tell,jdbcType=VARCHAR}, 
+      #{country,jdbcType=VARCHAR}, #{province,jdbcType=INTEGER}, #{city,jdbcType=INTEGER}, 
+      #{sysstate,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR})
+  </insert>
+  
+  <insert id="insertSelective" parameterType="UserDeliveryAddress" >
+    insert into tb_userdeliveryaddress
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="personname != null" >
+        personname,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="mail != null" >
+        mail,
+      </if>
+      <if test="tell != null" >
+        tell,
+      </if>
+      <if test="country != null" >
+        country,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="sysstate != null" >
+        sysstate,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="personname != null" >
+        #{personname,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mail != null" >
+        #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="tell != null" >
+        #{tell,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        #{province,jdbcType=INTEGER},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=INTEGER},
+      </if>
+      <if test="sysstate != null" >
+        #{sysstate,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="UserDeliveryAddress" >
+    update tb_userdeliveryaddress
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="personname != null" >
+        personname = #{personname,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mail != null" >
+        mail = #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="tell != null" >
+        tell = #{tell,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=INTEGER},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=INTEGER},
+      </if>
+      <if test="sysstate != null" >
+        sysstate = #{sysstate,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateByPrimaryKey" parameterType="UserDeliveryAddress" >
+    update tb_userdeliveryaddress
+    set userid = #{userid,jdbcType=INTEGER},
+      personname = #{personname,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      mail = #{mail,jdbcType=VARCHAR},
+      tell = #{tell,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      province = #{province,jdbcType=INTEGER},
+      city = #{city,jdbcType=INTEGER},
+      sysstate = #{sysstate,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+     <!-- 查询数据条数 -->
+  <select id="selectCount" parameterType="UserDeliveryAddress" resultType="int">
+   select count(*) from  tb_userdeliveryaddress  where 1=1
+       <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+     <if test="userid &gt; 0" >
+        and   userid = #{userid,jdbcType=INTEGER}
+      </if>
+      <if test="personname != null" >
+         and  personname = #{personname,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+        and   phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="mail != null" >
+        and   mail = #{mail,jdbcType=VARCHAR}
+      </if>
+      <if test="tell != null" >
+       and    tell = #{tell,jdbcType=VARCHAR}
+      </if>
+      <if test="country != null" >
+       and    country = #{country,jdbcType=VARCHAR}
+      </if>
+      <if test="province &gt; 0" >
+        and   province = #{province,jdbcType=INTEGER}
+      </if>
+      <if test="city &gt; 0" >
+        and   city = #{city,jdbcType=INTEGER}
+      </if>
+      <if test="remark != null" >
+        and   remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="address != null" >
+      and    address = #{address,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+       and  state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+       and  sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+  </select>
+  
+  <select id="selectList" parameterType="UserDeliveryAddress" resultMap="BaseResultMap">
+    select count(*) from  tb_userdeliveryaddress  where 1=1
+       <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+     <if test="userid &gt; 0" >
+        and   userid = #{userid,jdbcType=INTEGER}
+      </if>
+      <if test="personname != null" >
+         and  personname = #{personname,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+        and   phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="mail != null" >
+        and   mail = #{mail,jdbcType=VARCHAR}
+      </if>
+      <if test="tell != null" >
+       and    tell = #{tell,jdbcType=VARCHAR}
+      </if>
+      <if test="country != null" >
+       and    country = #{country,jdbcType=VARCHAR}
+      </if>
+      <if test="province &gt; 0" >
+        and   province = #{province,jdbcType=INTEGER}
+      </if>
+      <if test="city &gt; 0" >
+        and   city = #{city,jdbcType=INTEGER}
+      </if>
+      <if test="remark != null" >
+        and   remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="address != null" >
+      and    address = #{address,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+       and  state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+       and  sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+      order by id desc 
+      <if test=" pageSize!=0" >
+         limit #{offset ,jdbcType=INTEGER},#{pageSize ,jdbcType=INTEGER}
+      </if>
+  </select>
+  
+</mapper>

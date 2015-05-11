@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.MerchantWebsiteMapper" >
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.MerchantWebsite" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="merchantId" property="merchantid" jdbcType="INTEGER" />
+    <result column="siteName" property="sitename" jdbcType="VARCHAR" />
+    <result column="siteUrl" property="siteurl" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="sysstate" property="sysstate" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, merchantId, siteName, siteUrl, state, sysstate, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_merchantwebsite
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_merchantwebsite
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cyl.bean.pojo.MerchantWebsite" >
+    insert into tb_merchantwebsite (id, merchantId, siteName, 
+      siteUrl, state, sysstate, 
+      remark)
+    values (#{id,jdbcType=INTEGER}, #{merchantid,jdbcType=INTEGER}, #{sitename,jdbcType=VARCHAR}, 
+      #{siteurl,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, #{sysstate,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.MerchantWebsite" >
+    insert into tb_merchantwebsite
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="merchantid != null" >
+        merchantId,
+      </if>
+      <if test="sitename != null" >
+        siteName,
+      </if>
+      <if test="siteurl != null" >
+        siteUrl,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="sysstate != null" >
+        sysstate,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="merchantid != null" >
+        #{merchantid,jdbcType=INTEGER},
+      </if>
+      <if test="sitename != null" >
+        #{sitename,jdbcType=VARCHAR},
+      </if>
+      <if test="siteurl != null" >
+        #{siteurl,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysstate != null" >
+        #{sysstate,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyl.bean.pojo.MerchantWebsite" >
+    update tb_merchantwebsite
+    <set >
+      <if test="merchantid != null" >
+        merchantId = #{merchantid,jdbcType=INTEGER},
+      </if>
+      <if test="sitename != null" >
+        siteName = #{sitename,jdbcType=VARCHAR},
+      </if>
+      <if test="siteurl != null" >
+        siteUrl = #{siteurl,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysstate != null" >
+        sysstate = #{sysstate,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyl.bean.pojo.MerchantWebsite" >
+    update tb_merchantwebsite
+    set merchantId = #{merchantid,jdbcType=INTEGER},
+      siteName = #{sitename,jdbcType=VARCHAR},
+      siteUrl = #{siteurl,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      sysstate = #{sysstate,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

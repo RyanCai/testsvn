@@ -1,0 +1,92 @@
+﻿.sec_main{font-family:"Microsoft YaHei","微软雅黑",Simsun,Mingliu,Arial,Helvetica;overflow:hidden}
+.wrap-cont{width:980px;margin:0 auto;overflow:hidden}
+.lump{display:inline-block;float:left;width:4px;height:18px;background-color:#3DC054}
+.tit-txt{display:inline-block;float:left;height:18px;padding-left:10px;font-size:18px;color:#333;line-height:18px;_line-height:20px}
+.rule-box{background:url(resource/img/log-bg.jpg) no-repeat right bottom;padding:20px 0 50px 0}
+
+.rule-box-reg{background:url(resource/img/reg-bg.jpg) no-repeat right center}
+.rule-box-tit{width:980xp;height:56px}
+.rule-box-tit .line-tit{display:inline-block;float:left;padding-top:22px}
+.rule-box-tit{width:980xp;height:56px}
+.rule-box-tit .line-tit{display:inline-block;float:left;padding-top:22px}
+.rule-list{width:968px;padding:5px;overflow:hidden}
+.btn-txt:hover{text-decoration:none}
+.btn-txt{background-position:0 0;display:inline-block;*display:inline;overflow:hidden;zoom:1;height:22px;line-height:22px;color:#fff;padding:0 8px 0 10px;overflow:visible;border:0;margin:0;cursor:pointer}
+.btn-txt:hover{background-position:0 -22px}
+.btn-txt:active{background-position:0 -45px}
+.login-new-title{font-size:24px;display:block;width:570px;border-bottom:solid #c9c9c9 1px;padding-bottom:17px;margin-top:35px;margin-left:9px;font-family:"Microsoft YaHei"}
+.box-cont-new{margin-top:35px}
+.login-cont{width:566px}
+.reg-switch span.email{color:#f60}
+.reg-switch-box{width:560px}
+.val_send{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;margin-right:5px;margin-left:4px}
+.re-send{color:#999;font-size:14px}
+.regist-btn{position:absolute;top:325px;left:118px}
+.regist-btn input{width:209px}
+a.aggrement{color:#08c;text-decoration:none;cursor:pointer;letter-spacing:1px}
+.input-error{color:red}
+#second{color:#f60;margin:0 3px}
+.header{background:#f6f6f6}
+.login-cont .tuan li{float:left;height:30px;line-height:30px;margin-right:10px}
+.login-cont .contact-box{width:228px;height:124px;border:1px solid #e1e1e1;background:#fff;position:absolute;top:0;left:730px;color:#666;padding-top:10px}
+.login-cont .contact-box ul{margin-top:10px;margin-left:22px}
+.login-cont .contact-box ul li{margin-top:4px;cursor:default}
+.login-cont .contact-tel{color:#f60}
+.contact-tel a,.contact-tel a:hover{font-size:16px;color:#f60;text-decoration:none}
+.header .t-bn{background:#fcfcfc}
+.login-cont .mbox-verify .DialogButtons .m-rbtn{margin-right:236px}
+.input-error{background:#F60;border-radius:3px 3px 3px 3px;color:white;margin-top:6px;height:20px;padding:4px 10px 1px;z-index:999;position:absolute}
+.input-success{background:#3DC054;border-radius:3px 3px 3px 3px;color:white;margin-top:6px;height:20px;padding:4px 10px 1px;z-index:999;position:absolute}
+
+.log-bot-top{background:url(img/log-content-bg.png) repeat-x bottom;height:20px;display:block;margin-top:-20px}
+.log-head{background:url(img/log-topb.png) no-repeat center #eff2f5;padding:30px 0;border-bottom:2px solid #e4e9ee}
+.log-bot{background:#eff2f5;height:80px}
+
+.sec_main{background:#fff}
+.reg-botton,.log-btn{height:50px;font:18px/50px 'Microsoft YaHei';text-align:center;display:block;border:0;color:#fff;padding:0;cursor:pointer}
+.reg-botton{background:#fe9307;width:560px}
+.log-btn{background:#f46060;width:560px}
+
+.reg-ul .in_name{clear:both;height:40px;color:#5b5b5b}
+.reg-ul .in_name em{text-align:justify;width:68px;height:40px;float:left;font:14px/40px 'Microsoft YaHei';letter-spacing:-1px}
+.reg-ul .in_name i{display:inline-block;padding-left:100%;_display:none}
+.tip1{display:inline}
+.reg-ul .inputxt{width:332px;height:30px;line-height:30px;padding:5px 10px;border:1px solid #e4e4e4;color:#585858}
+
+.input_box{margin-bottom:20px;line-height:40px}
+.reg-switch{margin:10px 0 20px 0;height:40px}
+.reg-switch a{font:16px/40px 'Microsoft YaHei';border-bottom:2px solid #fff;color:#535353;margin-right:30px;height:40px;display:inline-block;float:left;text-align:center}
+.reg-switch a.cur{color:#f46060;border-bottom:3px solid #f46060}
+
+.promsg{height:30px;margin:15px 0 15px 10px;color:#f46060;font:14px/30px 'Microsoft YaHei';background:url(img/pro-i.png) no-repeat left center;padding-left:20px}
+.Validform_wrong{color:#d34967;background:url(img/wrong-i.png) no-repeat left center}
+.Validform_right{color:#3ec394;background:url(img/yes-i.png) no-repeat left center}
+.login-ul .input_box{border-bottom:1px solid #e9ecee;height:48px;padding-top:30px;clear:both}
+
+.login-ul .inputxt{border:0;height:24px;font:14px/24px 'Microsoft YaHei';color:#585858;padding:6px 5px;float:left;margin-left:10px;}
+.login-ul .logicon{background:url(img/logicons.png) no-repeat;width:23px;height:30px;text-indent:9999px;white-space:nowrap;cursor:pointer;vertical-align:middle;display:block;float:left;margin-top:3px}
+.login-ul .pass-icon{background-position:-24px 0}.login-ul .code-icon{background-position:-46px 0;width:28px}
+.login-ul .codeimg{float:right;display:block}
+.login-ul .big_input{width:500px}
+.login-ul .code_input{width:300px}
+.reg-ul .input_box{width:425px}
+.reg-ul .Validform_error{border:1px solid #fe9307}
+.reg-ul .code_input{width:200px;vertical-align:middle}
+.reg-ul .codeimg{vertical-align:middle;float:right;width:130px;height:40px}
+.affirm > .Validform_error+label{color:#f00}
+.affirm{margin-top:20px}
+.affirm #check,.affirm{vertical-align:middle}
+.affirm a{color:#4cce7f}
+
+.aside-right-new{height:30px;line-height:30px;margin:10px 0;width:560px}
+.aside-right-new{color:#7c7c7c}
+.aside-right-new a{margin-right:10px;color:#f46060}
+.other-way{float:right}
+.other-way a{margin-right:5px}
+.other-way .qq,.other-way .tb{text-indent:9999px;white-space:nowrap;cursor:pointer;width:26px;height:26px;display:inline-block;vertical-align:middle}
+.other-way .qq{background:url(img/other-way.png) no-repeat}
+.other-way .tb{background:url(img/other-way.png) no-repeat -32px 0}
+
+.check-data{position:relative;width:50%;margin:60px auto 200px auto;padding-left:80px;height:auto;line-height:26px;font:14px/26px 'Microsoft YaHei'}
+.check-data i{background:url(img/login.png) no-repeat 0 -260px;width:54px;height:58px;position:absolute;left:0}
+.check-data a{color:#f46060;margin:0 5px}

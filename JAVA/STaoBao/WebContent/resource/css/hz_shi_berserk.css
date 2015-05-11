@@ -1,0 +1,94 @@
+﻿.more-goods .ju-itemlist{width:1100px}
+.wrap-cont{width:980px;margin:0 auto;overflow:hidden}
+.try-head{width:980px;margin:15px auto;margin-bottom:0; overflow:hidden;}
+.try-head .try-head-left{width:700px;float:left;height:280px;background:#FFF}
+.try-head .try-head-right{width:220px;float:right;height:280px;background:#FFF;position:relative}
+.try-head .try-head-left .slide{width:700px;height:280px;position:relative;float:left;overflow:hidden}
+
+
+
+.try-head .slide cite.manage{position:absolute;width:40px;height:18px;line-height:18px;text-align:center;display:block;top:1px;right:1px;z-index:2;background:#F84F76}
+.try-head .slide cite.manage a{color:#FFF}
+.try-head .slide #SlidePlayer{position:relative;margin:0 auto}
+.try-head .slide .Slides{padding:0;margin:0;list-style:none;height:260px}
+.try-head .slide .Slides li{float:left;width:700px;height:280px}
+.try-head .slide .Slides img{border:0;display:block;width:700px;height:280px}
+.try-head .slide .SlideTriggers{margin:0;padding:0;list-style:none;position:absolute;bottom:10px;right:10px;z-index:10;height:25px}
+.try-head .slide .SlideTriggers li{float:left;border-radius:100%;behavior:url(ie-css3.htc);display:inline;color:#74a8ed;text-align:center;line-height:18px;width:18px;height:18px;font-family:Arial;font-size:12px;cursor:pointer;overflow:hidden;margin:3px 3px;color:#fff;background:#000;font-weight:800;filter:alpha(opacity=80);opacity:0.5}
+.try-head .slide .SlideTriggers li.Current{color:#fff;background:#FC3C75}
+.try-head ul.pic{width:155px;margin:5px 5px 5px 0;clear:both}
+.try-head ul.pic li{width:155px;height:82px;background:#FFCC99;border-bottom:1px #EEEEEE solid}
+.try-head ul.pic li.pic-3{border-bottom:none}
+
+.try-head .title{width:222px;height:40px;position:absolute;left:-1px;top:-1px;z-index:3;background:url(img/try.png) no-repeat}
+.try-head .help{width:200px;margin:54px auto;margin-bottom:0;height:164px}
+.try-head .help li{font-size:14px;height:20px;line-height:20px;margin:0 0 12px 10px}
+.try-head .help li a{color:#666}
+.try-head .help li i{width:20px;height:20px;display:block;float:left;margin-right:14px}
+.try-head .help li.help-1{background:url(img/try.png) -280px 0 no-repeat}
+.try-head .help li.help-2{background:url(img/try.png) -280px -20px no-repeat}
+.try-head .help li.help-3{background:url(img/try.png) -280px -40px no-repeat}
+.try-head .help li.help-4{background:url(img/try.png) -280px -60px no-repeat}
+.try-head .help li.help-5{background:url(img/try.png) -280px -80px no-repeat}
+
+.try-head .help li a:hover{color:#3DC054}
+.try-head .app{width:220px;height:42px;background:url(img/try.png) 0 -40px no-repeat;margin:0 auto}
+.try-head .app li{float:left;height:20px;line-height:20px;margin:12px auto;margin-bottom:0;background:url(img/dian.gif) no-repeat 15px 10px;padding:0 15px 0 25px;font-size:14px;}
+.try-head .app li a{color:#666}
+.try-head .app li a:hover{color:#3DC054}
+
+
+.trymod .title u{color: #9d9d9d;font-size: 12px;text-decoration:line-through; padding-right:5px;}
+.trymod .title .mai{ width:70%; height:20px; line-height:20px; display:block; float:left; overflow:hidden;}
+.trymod{border:1px #f5f5f5 solid;background:#f5f5f5; display:block;}
+.trymod:hover{ background:#ff4949; border:1px solid #ff2767; color:#fff;}
+.trymod:hover a{color:#fff;}
+.trymod:hover .upbtn{background: #fce077;border:1px solid #fce077;color: #ab2b2d;}
+.trymod:hover .free_cost_a_b{ color: #FC3C75; background:#fff;}
+.trymod:hover .free_cost_h{ color: #FC3C75; background:#fff; border-color:#fff}
+.trymod:hover .title u{ color:#fff}
+.try-list .titles{ border-bottom:3px solid #24cb90; margin:20px 0 10px 0; width:978px; position:relative;}
+.try-list .titles h3{ float:left; color:#fff; width:96px; height:34px; background:#24cb90; line-height:34px; font: bold 16px/36px 'microsoft YaHei'; text-align:center;}
+.try-list .titles .lis_cate{ position:absolute;right:0px; top:1px;}
+.try-list .titles .lis_cate li{ display:inline;margin-left:2px;}
+.try-list .titles .lis_cate li a{padding: 3px 10px;font: 12px/30px 'Microsoft YaHei';color: #383838;border: 1px solid #b6b6b6;}
+.try-list .titles .lis_cate li a.cur{ border: 1px solid #ff4162;color: #fff;background: #ff4162;}
+.try-list .titles .times{ float:right; display:none;}
+.try-list .titles .times i{ background:url(img/ind-bg.png) no-repeat -136px -78px; width:30px; height:30px; display:inline-block; vertical-align:middle; margin-right:5px;}
+.try-list ul.try{margin:0 auto; width:998px; overflow:hidden;}
+.try-list ul.try li{float:left;width:232px;padding:10px 17px 10px 0}
+.try-list .trymod{margin:0 auto;width:230px;position:relative;border-radius:.3em;-webkit-border-radius:.3em;-moz-border-radius:.3em; padding-bottom:20px; }
+.try-list .trymod .thumb{width:230px;height:230px;margin:0 auto;position:relative; background:#fff}
+.try-list .trymod .thumb img{border-radius:.3em .3em 0 0;-webkit-border-radius:.3em .3em 0 0;-moz-border-radius: .3em .3em 0 0}
+.try-list .trymod .thumb cite{width:100%;height:22px;line-height:22px;background:#000;position:absolute;z-index:2;left:0;bottom:0;filter:alpha(opacity=50);opacity:0.5}
+.try-list .trymod .thumb span{width:100%;height:22px;line-height:22px;position:absolute;z-index:3;left:0;bottom:0;color:#FFF;text-indent:10px}
+.try-list .trymod .title{margin:0 auto;padding-top:10px;height:20px;line-height:20px;font-size:14px;}
+.try-list .trymod .title a{color:#666}
+.try-list .trymod .count{width:210px;margin:0 auto;padding:10px 0 10px 0;clear:both;height:20px;line-height:20px;color:#888;overflow:hidden}
+.try-list .trymod .count span.left{width:100px;display:block;float:left;text-align:left}
+.try-list .trymod .count span.left i{font-size:14px;color:#FF333F;padding-right:4px;font-weight:bold}
+.try-list .trymod .count span.right{width:110px;display:block;float:right;text-align:right}
+.try-list .trymod .count span.right i{font-size:14px;color:#669900;padding-right:4px;font-weight:bold}
+
+.try-list .trymod .appbut{width:230px;height:50px;margin:0 auto;background:#FAFAFA;border-top:1px #EBEBEB solid}
+.try-list .trymod .appbut a{width:120px;height:30px;line-height:30px;display:block;color:#FFF;margin:10px auto;margin-bottom:0;text-align:center;border-radius:1em;font-size:14px}
+.try-list .trymod .appbut a.app{background:#3DC054}
+.try-list .trymod .appbut a.app:hover{background:#5FCD72;text-decoration:none}
+.try-list .trymod .appbut a.append{background:#C2C2C2}
+.try-list .trymod .appbut a.append:hover{text-decoration:none}
+.try-list .trymod .appbut a.appexm{background:#666}
+.try-list .trymod .appbut a.appexm:hover{text-decoration:none}
+.free_cost_a_a{margin-right:5px;height:14px;line-height:14px;padding:0px 2px;background:#3DC054;border:1px solid #3CBB52;color:#fff;border-radius:2px;font-size:12px;font-weight:100}
+.free_cost_a_b{margin-right:5px;height:14px;line-height:14px;padding:0px 2px;background:#FC3C75;border:1px solid #FC3C75;color:white;border-radius:2px;font-size:12px;font-weight:100}
+.free_cost_h{margin-right:5px;height:14px;line-height:14px;padding:0px 2px;background:#ff8f2c;border:1px solid #ff8f2c;color:white;border-radius:2px;font-size:12px;font-weight:100}
+
+.item_go_so{background:url(Images/Shi/so.gif) no-repeat;width:14px;height:14px;display:block;float:left;margin-left:20px;vertical-align:middle;margin-top:9px;margin-right:-20px}
+.item_go_mobile{background:url(Images/Shi/mobile.gif) no-repeat;width:14px;height:14px;display:block;float:left;margin-left:20px;vertical-align:middle;margin-top:9px;margin-right:-20px}
+.radius{border-radius:100%;behavior:url(ie-css3.htc)}
+.tomorrow_title{float:right;margin-left:10px;font-size:14px;color:#FFF;background-color:#FC3C75;text-decoration:none;padding:0 15px;border-radius:2px}
+.tomorrow_title_qun{float:right;margin-left:10px;font-size:14px;color:#FFF;background-color:#3DC054;text-decoration:none;padding:0 15px;border-radius:2px}
+.tomorrow_title_hover{float:right;margin-left:10px;font-size:14px;color:#FFF;background-color:#3f3f3f;text-decoration:none;padding:0 15px;border-radius:2px}
+.brand-category{width:978px;height:auto;margin:15px auto 0px;border:#d2d2d2 solid 1px;background-color:#FFFFFF}
+.shi_alert{color:#333;padding-left:70px;background:url("Images/Cate/ico_tip.png") no-repeat;background-position:-6px -5px;height:auto!important;height:50px;min-height:50px;margin-top:100px;margin-bottom:100px}
+.shi_alert h4{font-size:14px;height:48px;line-height:48px}
+.c_clongc{width:400px;margin:0 auto}

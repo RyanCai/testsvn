@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+ xmlns:context="http://www.springframework.org/schema/context"  
+ xmlns:p="http://www.springframework.org/schema/p"  
+ xmlns:mvc="http://www.springframework.org/schema/mvc"  
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+ xsi:schemaLocation="http://www.springframework.org/schema/beans  
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+      http://www.springframework.org/schema/context  
+      http://www.springframework.org/schema/context/spring-context.xsd  
+      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+   
+   <!--          
+  <mvc:default-servlet-handler/> 
+ <context:component-scan base-package="com.cyl.springmvc.controller" />
+ 
+ <bean name="/hello" class="com.cyl.springmvc.controller.HelloWorldController" />
+ 
+ <bean name="/cai" class="com.cyl.springmvc.Mycontroller.MyControllerDemo" />
+ 
+ <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="prefix" value="/" />
+  <property name="suffix" value=".jsp" />
+ </bean>
+ 
+ <bean id="viewResolver"
+  class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+  <property name="viewClass"
+   value="org.springframework.web.servlet.view.JstlView" />
+  <property name="prefix" value="/" />
+  <property name="suffix" value=".jsp" />
+ </bean>
+ --> 
+ <!-- 资源文件
+ 
+         <mvc:resources mapping="/resource/js/**" location="/resources/js/"/>     
+         <mvc:resources mapping="/resource/css/**"  location="/resources/css/"/>     
+         <mvc:resources mapping="/resource/img/**"  location="/resources/img/"/>
+  -->
+ 
+ <!-- 对静态资源文件的访问 :采用默认处理器 -->
+ <mvc:default-servlet-handler/>
+   
+   <mvc:annotation-driven>
+      <mvc:message-converters register-defaults="true">  
+    <bean  class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"  p:supportedMediaTypes="text/html" />  
+    </mvc:message-converters> 
+   </mvc:annotation-driven>
+      
+ <context:component-scan base-package="com.cyl.controller" />
+ 
+ 
+ <bean id="viewResolver"
+  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="viewClass"
+   value="org.springframework.web.servlet.view.JstlView" />
+  <property name="prefix" value="/" />
+  <property name="suffix" value=".jsp" />
+ </bean>
+ 
+ <!-- json的配置
+   <mvc:message-converters register-defaults="true">  
+    <bean  class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"  p:supportedMediaTypes="/" />  
+    </mvc:message-converters> 
+ 
+ <bean  class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"  
+        p:ignoreDefaultModelOnRedirect="true" >  
+            <property name="messageConverters">  
+                <list>  
+                    <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>  
+                </list>  
+            </property>  
+ </bean>  
+  -->
+ 
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</beans>

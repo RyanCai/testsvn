@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.VIPBeanMapper" >
+
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.VIPBean" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="vipName" property="vipname" jdbcType="VARCHAR" />
+    <result column="isfee" property="isfee" jdbcType="INTEGER" />
+    <result column="feetype" property="feetype" jdbcType="INTEGER" />
+    <result column="viptype" property="viptype" jdbcType="INTEGER" />
+    <result column="charge" property="charge" jdbcType="DOUBLE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="sys_exefeeRule" property="sysExefeerule" jdbcType="VARCHAR" />
+    <result column="sys_sdcount" property="sysSdcount" jdbcType="INTEGER" />
+    <result column="sys_countingPeriod" property="sysCountingperiod" jdbcType="INTEGER" />
+    <result column="sys_userTXMin" property="sysUsertxmin" jdbcType="DOUBLE" />
+    <result column="sys_merchantSDRate" property="sysMerchantsdrate" jdbcType="DOUBLE" />
+  </resultMap>
+  
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+   *
+    from tb_vip
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_vip
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="com.cyl.bean.pojo.VIPBean" >
+    insert into tb_vip (vipName, isfee, 
+      feetype, viptype, charge, 
+      remark, sys_exefeeRule, sys_sdcount, 
+      sys_countingPeriod, sys_userTXMin, sys_merchantSDRate
+      )
+    values ( #{vipname,jdbcType=VARCHAR}, #{isfee,jdbcType=INTEGER}, 
+      #{feetype,jdbcType=INTEGER}, #{viptype,jdbcType=INTEGER}, #{charge,jdbcType=DOUBLE}, 
+      #{remark,jdbcType=VARCHAR}, #{sysExefeerule,jdbcType=VARCHAR}, #{sysSdcount,jdbcType=INTEGER}, 
+      #{sysCountingperiod,jdbcType=INTEGER}, #{sysUsertxmin,jdbcType=DOUBLE}, #{sysMerchantsdrate,jdbcType=DOUBLE}
+      )
+  </insert>
+  
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.VIPBean" >
+    insert into tb_vip
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="vipname != null" >
+        vipName,
+      </if>
+      <if test="isfee != null" >
+        isfee,
+      </if>
+      <if test="feetype != null" >
+        feetype,
+      </if>
+      <if test="viptype != null" >
+        viptype,
+      </if>
+      <if test="charge != null" >
+        charge,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="sysExefeerule != null" >
+        sys_exefeeRule,
+      </if>
+      <if test="sysSdcount != null" >
+        sys_sdcount,
+      </if>
+      <if test="sysCountingperiod != null" >
+        sys_countingPeriod,
+      </if>
+      <if test="sysUsertxmin != null" >
+        sys_userTXMin,
+      </if>
+      <if test="sysMerchantsdrate != null" >
+        sys_merchantSDRate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="vipname != null" >
+        #{vipname,jdbcType=VARCHAR},
+      </if>
+      <if test="isfee != null" >
+        #{isfee,jdbcType=INTEGER},
+      </if>
+      <if test="feetype != null" >
+        #{feetype,jdbcType=INTEGER},
+      </if>
+      <if test="viptype != null" >
+        #{viptype,jdbcType=INTEGER},
+      </if>
+      <if test="charge != null" >
+        #{charge,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sysExefeerule != null" >
+        #{sysExefeerule,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSdcount != null" >
+        #{sysSdcount,jdbcType=INTEGER},
+      </if>
+      <if test="sysCountingperiod != null" >
+        #{sysCountingperiod,jdbcType=INTEGER},
+      </if>
+      <if test="sysUsertxmin != null" >
+        #{sysUsertxmin,jdbcType=DOUBLE},
+      </if>
+      <if test="sysMerchantsdrate != null" >
+        #{sysMerchantsdrate,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyl.bean.pojo.VIPBean" >
+    update tb_vip
+    <set >
+      <if test="vipname != null" >
+        vipName = #{vipname,jdbcType=VARCHAR},
+      </if>
+      <if test="isfee != null" >
+        isfee = #{isfee,jdbcType=INTEGER},
+      </if>
+      <if test="feetype != null" >
+        feetype = #{feetype,jdbcType=INTEGER},
+      </if>
+      <if test="viptype != null" >
+        viptype = #{viptype,jdbcType=INTEGER},
+      </if>
+      <if test="charge != null" >
+        charge = #{charge,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sysExefeerule != null" >
+        sys_exefeeRule = #{sysExefeerule,jdbcType=VARCHAR},
+      </if>
+      <if test="sysSdcount != null" >
+        sys_sdcount = #{sysSdcount,jdbcType=INTEGER},
+      </if>
+      <if test="sysCountingperiod != null" >
+        sys_countingPeriod = #{sysCountingperiod,jdbcType=INTEGER},
+      </if>
+      <if test="sysUsertxmin != null" >
+        sys_userTXMin = #{sysUsertxmin,jdbcType=DOUBLE},
+      </if>
+      <if test="sysMerchantsdrate != null" >
+        sys_merchantSDRate = #{sysMerchantsdrate,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateByPrimaryKey" parameterType="com.cyl.bean.pojo.VIPBean" >
+    update tb_vip
+    set vipName = #{vipname,jdbcType=VARCHAR},
+      isfee = #{isfee,jdbcType=INTEGER},
+      feetype = #{feetype,jdbcType=INTEGER},
+      viptype = #{viptype,jdbcType=INTEGER},
+      charge = #{charge,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      sys_exefeeRule = #{sysExefeerule,jdbcType=VARCHAR},
+      sys_sdcount = #{sysSdcount,jdbcType=INTEGER},
+      sys_countingPeriod = #{sysCountingperiod,jdbcType=INTEGER},
+      sys_userTXMin = #{sysUsertxmin,jdbcType=DOUBLE},
+      sys_merchantSDRate = #{sysMerchantsdrate,jdbcType=DOUBLE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.SysAllMoneyMapper" >
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.SysAllMoney" >
+    <result column="inputMoney" property="inputmoney" jdbcType="DOUBLE" />
+    <result column="outputMoney" property="outputmoney" jdbcType="DOUBLE" />
+    <result column="allMoney" property="allmoney" jdbcType="DOUBLE" />
+  </resultMap>
+  <insert id="insert" parameterType="com.cyl.bean.pojo.SysAllMoney" >
+    insert into sys_allmoney (inputMoney, outputMoney, allMoney
+      )
+    values (#{inputmoney,jdbcType=DOUBLE}, #{outputmoney,jdbcType=DOUBLE}, #{allmoney,jdbcType=DOUBLE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.SysAllMoney" >
+    insert into sys_allmoney
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="inputmoney != null" >
+        inputMoney,
+      </if>
+      <if test="outputmoney != null" >
+        outputMoney,
+      </if>
+      <if test="allmoney != null" >
+        allMoney,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="inputmoney != null" >
+        #{inputmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="outputmoney != null" >
+        #{outputmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="allmoney != null" >
+        #{allmoney,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.SysUserMapper" >
+
+  <resultMap id="BaseResultMap" type="SysUser" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="username" property="username" jdbcType="VARCHAR" />
+    <result column="loginPassword" property="loginpassword" jdbcType="VARCHAR" />
+    <result column="getCashPassword" property="getcashpassword" jdbcType="VARCHAR" />
+    <result column="userType" property="usertype" jdbcType="INTEGER" />
+    <result column="isvip" property="isvip" jdbcType="INTEGER" />
+    <result column="IDCauditstate" property="idcauditstate" jdbcType="VARCHAR" />
+    <result column="vipId" property="vipid" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="mail" property="mail" jdbcType="VARCHAR" />
+    <result column="recommendUserId" property="recommenduserid" jdbcType="INTEGER" />
+    <result column="QQ" property="qq" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="tell" property="tell" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="IDCardNo" property="idcardno" jdbcType="VARCHAR" />
+    <result column="personImg" property="personimg" jdbcType="VARCHAR" />
+    <result column="IDCardImg1" property="idcardimg1" jdbcType="VARCHAR" />
+    <result column="IDCardImg2" property="idcardimg2" jdbcType="VARCHAR" />
+    <result column="availableAccount" property="availableaccount" jdbcType="DOUBLE" />
+    <result column="frozenAccount" property="frozenaccount" jdbcType="DOUBLE" />
+    <result column="presentExpAccount" property="presentexpaccount" jdbcType="DOUBLE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="sys_state" property="sysState" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="int" >
+    select  *   from sys_user   where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="int" >
+    delete from sys_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="SysUser" >
+    insert into sys_user (id, username, loginPassword, 
+      getCashPassword, userType, isvip, 
+      IDCauditstate, vipId, sex, 
+      mail, recommendUserId, QQ, 
+      phone, tell, name, 
+      age, IDCardNo, personImg, 
+      IDCardImg1, IDCardImg2, availableAccount, 
+      frozenAccount, presentExpAccount, remark, 
+      state, sys_state)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{loginpassword,jdbcType=VARCHAR}, 
+      #{getcashpassword,jdbcType=VARCHAR}, #{usertype,jdbcType=INTEGER}, #{isvip,jdbcType=INTEGER}, 
+      #{idcauditstate,jdbcType=VARCHAR}, #{vipid,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER}, 
+      #{mail,jdbcType=VARCHAR}, #{recommenduserid,jdbcType=INTEGER}, #{qq,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{tell,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{idcardno,jdbcType=VARCHAR}, #{personimg,jdbcType=VARCHAR}, 
+      #{idcardimg1,jdbcType=VARCHAR}, #{idcardimg2,jdbcType=VARCHAR}, #{availableaccount,jdbcType=DOUBLE}, 
+      #{frozenaccount,jdbcType=DOUBLE}, #{presentexpaccount,jdbcType=DOUBLE}, #{remark,jdbcType=VARCHAR}, 
+      #{state,jdbcType=INTEGER}, #{sysState,jdbcType=INTEGER})
+  </insert>
+  
+  <insert id="insertSelective" parameterType="SysUser" >
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="loginpassword != null" >
+        loginPassword,
+      </if>
+      <if test="getcashpassword != null" >
+        getCashPassword,
+      </if>
+      <if test="usertype != null" >
+        userType,
+      </if>
+      <if test="isvip != null" >
+        isvip,
+      </if>
+      <if test="idcauditstate != null" >
+        IDCauditstate,
+      </if>
+      <if test="vipid != null" >
+        vipId,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="mail != null" >
+        mail,
+      </if>
+      <if test="recommenduserid != null" >
+        recommendUserId,
+      </if>
+      <if test="qq != null" >
+        QQ,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="tell != null" >
+        tell,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="idcardno != null" >
+        IDCardNo,
+      </if>
+      <if test="personimg != null" >
+        personImg,
+      </if>
+      <if test="idcardimg1 != null" >
+        IDCardImg1,
+      </if>
+      <if test="idcardimg2 != null" >
+        IDCardImg2,
+      </if>
+      <if test="availableaccount != null" >
+        availableAccount,
+      </if>
+      <if test="frozenaccount != null" >
+        frozenAccount,
+      </if>
+      <if test="presentexpaccount != null" >
+        presentExpAccount,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="sysState != null" >
+        sys_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="loginpassword != null" >
+        #{loginpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="getcashpassword != null" >
+        #{getcashpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null" >
+        #{usertype,jdbcType=INTEGER},
+      </if>
+      <if test="isvip != null" >
+        #{isvip,jdbcType=INTEGER},
+      </if>
+      <if test="idcauditstate != null" >
+        #{idcauditstate,jdbcType=VARCHAR},
+      </if>
+      <if test="vipid != null" >
+        #{vipid,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="mail != null" >
+        #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="recommenduserid != null" >
+        #{recommenduserid,jdbcType=INTEGER},
+      </if>
+      <if test="qq != null" >
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tell != null" >
+        #{tell,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="idcardno != null" >
+        #{idcardno,jdbcType=VARCHAR},
+      </if>
+      <if test="personimg != null" >
+        #{personimg,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimg1 != null" >
+        #{idcardimg1,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimg2 != null" >
+        #{idcardimg2,jdbcType=VARCHAR},
+      </if>
+      <if test="availableaccount != null" >
+        #{availableaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="frozenaccount != null" >
+        #{frozenaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="presentexpaccount != null" >
+        #{presentexpaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysState != null" >
+        #{sysState,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  <update id="updateByPrimaryKeySelective" parameterType="SysUser" >
+    update sys_user
+    <set >
+      <if test="loginpassword != null" >
+        loginPassword = #{loginpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="getcashpassword != null" >
+        getCashPassword = #{getcashpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype &gt; 0" >
+        userType = #{usertype,jdbcType=INTEGER},
+      </if>
+      <if test="isvip &gt; 0" >
+        isvip = #{isvip,jdbcType=INTEGER},
+      </if>
+      <if test="idcauditstate != null" >
+        IDCauditstate = #{idcauditstate,jdbcType=VARCHAR},
+      </if>
+      <if test="vipid &gt; 0" >
+        vipId = #{vipid,jdbcType=INTEGER},
+      </if>
+      <if test="sex &gt; 0" >
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="mail != null" >
+        mail = #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="recommenduserid &gt; 0" >
+        recommendUserId = #{recommenduserid,jdbcType=INTEGER},
+      </if>
+      <if test="qq != null" >
+        QQ = #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tell != null" >
+        tell = #{tell,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="age &gt; 0" >
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="idcardno != null" >
+        IDCardNo = #{idcardno,jdbcType=VARCHAR},
+      </if>
+      <if test="personimg != null" >
+        personImg = #{personimg,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimg1 != null" >
+        IDCardImg1 = #{idcardimg1,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardimg2 != null" >
+        IDCardImg2 = #{idcardimg2,jdbcType=VARCHAR},
+      </if>
+      <if test="availableaccount &gt; 0.0" >
+        availableAccount = #{availableaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="frozenaccount &gt; 0.0" >
+        frozenAccount = #{frozenaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="presentexpaccount &gt; 0.0" >
+        presentExpAccount = #{presentexpaccount,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="state &gt; 0" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysState &gt; 0" >
+        sys_state = #{sysState,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      
+  </update>
+  
+  
+  <update id="updateByPrimaryKey" parameterType="SysUser" >
+    update sys_user
+    set loginPassword = #{loginpassword,jdbcType=VARCHAR},
+      getCashPassword = #{getcashpassword,jdbcType=VARCHAR},
+      userType = #{usertype,jdbcType=INTEGER},
+      isvip = #{isvip,jdbcType=INTEGER},
+      IDCauditstate = #{idcauditstate,jdbcType=VARCHAR},
+      vipId = #{vipid,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=INTEGER},
+      mail = #{mail,jdbcType=VARCHAR},
+      recommendUserId = #{recommenduserid,jdbcType=INTEGER},
+      QQ = #{qq,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      tell = #{tell,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      IDCardNo = #{idcardno,jdbcType=VARCHAR},
+      personImg = #{personimg,jdbcType=VARCHAR},
+      IDCardImg1 = #{idcardimg1,jdbcType=VARCHAR},
+      IDCardImg2 = #{idcardimg2,jdbcType=VARCHAR},
+      availableAccount = #{availableaccount,jdbcType=DOUBLE},
+      frozenAccount = #{frozenaccount,jdbcType=DOUBLE},
+      presentExpAccount = #{presentexpaccount,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      sys_state = #{sysState,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+      and username = #{username,jdbcType=VARCHAR}
+  </update>
+  
+  
+  <!-- 查询数据条数 -->
+  <select id="selectCount" parameterType="SysUser" resultType="int">
+   select count(*) from  sys_user where 1=1
+   <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+      <if test="username != null" >
+        and username = #{username,jdbcType=VARCHAR}
+      </if>
+      <if test="loginpassword != null" >
+         and loginPassword = #{loginpassword,jdbcType=VARCHAR}
+      </if>
+      <if test="getcashpassword != null" >
+         and getCashPassword = #{getcashpassword,jdbcType=VARCHAR}
+      </if>
+      <if test="usertype &gt; 0" >
+         and userType = #{usertype,jdbcType=INTEGER}
+      </if>
+      <if test="isvip &gt; 0" >
+         and isvip = #{isvip,jdbcType=INTEGER}
+      </if>
+      <if test="idcauditstate != null" >
+         and IDCauditstate = #{idcauditstate,jdbcType=VARCHAR}
+      </if>
+      <if test="vipid &gt; 0" >
+         and vipId = #{vipid,jdbcType=INTEGER}
+      </if>
+      <if test="sex &gt; 0" >
+         and sex = #{sex,jdbcType=INTEGER}
+      </if>
+      <if test="mail != null" >
+         and mail = #{mail,jdbcType=VARCHAR}
+      </if>
+      <if test="recommenduserid &gt; 0" >
+         and recommendUserId = #{recommenduserid,jdbcType=INTEGER}
+      </if>
+      <if test="qq != null" >
+         and QQ = #{qq,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+         and phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="tell != null" >
+         and tell = #{tell,jdbcType=VARCHAR}
+      </if>
+      <if test="name != null" >
+         and name = #{name,jdbcType=VARCHAR}
+      </if>
+      <if test="age &gt; 0" >
+         and age = #{age,jdbcType=INTEGER}
+      </if>
+      <if test="idcardno != null" >
+         and IDCardNo = #{idcardno,jdbcType=VARCHAR}
+      </if>
+      <if test="personimg != null" >
+         and personImg = #{personimg,jdbcType=VARCHAR}
+      </if>
+      <if test="idcardimg1 != null" >
+         and IDCardImg1 = #{idcardimg1,jdbcType=VARCHAR}
+      </if>
+      <if test="idcardimg2 != null" >
+         and IDCardImg2 = #{idcardimg2,jdbcType=VARCHAR}
+      </if>
+      <if test="availableaccount &gt; 0.0" >
+         and availableAccount = #{availableaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="frozenaccount &gt; 0.0" >
+         and frozenAccount = #{frozenaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="presentexpaccount &gt; 0.0" >
+         and presentExpAccount = #{presentexpaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="remark != null" >
+         and remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+         and state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+         and sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+  
+  
+  </select>
+  
+  <select id="selectList" parameterType="SysUser" resultMap="BaseResultMap">
+   select * from  sys_user where 1=1
+  <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+      <if test="username != null" >
+        and username = #{username,jdbcType=VARCHAR}
+      </if>
+      <if test="loginpassword != null" >
+         and loginPassword = #{loginpassword,jdbcType=VARCHAR}
+      </if>
+      <if test="getcashpassword != null" >
+         and getCashPassword = #{getcashpassword,jdbcType=VARCHAR}
+      </if>
+      <if test="usertype &gt; 0" >
+         and userType = #{usertype,jdbcType=INTEGER}
+      </if>
+      <if test="isvip &gt;  0" >
+         and isvip = #{isvip,jdbcType=INTEGER}
+      </if>
+      <if test="idcauditstate != null" >
+         and IDCauditstate = #{idcauditstate,jdbcType=VARCHAR}
+      </if>
+      <if test="vipid &gt; 0" >
+         and vipId = #{vipid,jdbcType=INTEGER}
+      </if>
+      <if test="sex &gt; 0" >
+         and sex = #{sex,jdbcType=INTEGER}
+      </if>
+      <if test="mail != null" >
+         and mail = #{mail,jdbcType=VARCHAR}
+      </if>
+      <if test="recommenduserid &gt; 0" >
+         and recommendUserId = #{recommenduserid,jdbcType=INTEGER}
+      </if>
+      <if test="qq != null" >
+         and QQ = #{qq,jdbcType=VARCHAR}
+      </if>
+      <if test="phone != null" >
+         and phone = #{phone,jdbcType=VARCHAR}
+      </if>
+      <if test="tell != null" >
+         and tell = #{tell,jdbcType=VARCHAR}
+      </if>
+      <if test="name != null" >
+         and name = #{name,jdbcType=VARCHAR}
+      </if>
+      <if test="age &gt; 0" >
+         and age = #{age,jdbcType=INTEGER}
+      </if>
+      <if test="idcardno != null" >
+         and IDCardNo = #{idcardno,jdbcType=VARCHAR}
+      </if>
+      <if test="personimg != null" >
+         and personImg = #{personimg,jdbcType=VARCHAR}
+      </if>
+      <if test="idcardimg1 != null" >
+         and IDCardImg1 = #{idcardimg1,jdbcType=VARCHAR}
+      </if>
+      <if test="idcardimg2 != null" >
+         and IDCardImg2 = #{idcardimg2,jdbcType=VARCHAR}
+      </if>
+      <if test="availableaccount &gt; 0.0" >
+         and availableAccount = #{availableaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="frozenaccount &gt; 0.0" >
+         and frozenAccount = #{frozenaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="presentexpaccount &gt; 0.0" >
+         and presentExpAccount = #{presentexpaccount,jdbcType=DOUBLE}
+      </if>
+      <if test="remark != null" >
+         and remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+         and state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+         and sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+      order by id desc 
+      <if test=" pageSize!=0" >
+         limit #{offset ,jdbcType=INTEGER},#{pageSize ,jdbcType=INTEGER}
+      </if>
+  </select>
+  
+</mapper>

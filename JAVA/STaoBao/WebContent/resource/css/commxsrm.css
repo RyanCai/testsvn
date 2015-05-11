@@ -1,0 +1,98 @@
+﻿@charset "utf-8";
+html,body {height:100%}
+body,div,applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,em{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-size:100%;font-family:inherit;font-style:normal;list-style:none}
+:focus{outline:0} 
+body{color:black;background:white;font-size:14px;font-family:Arial, Helvetica, sans-serif} 
+ol,ul{list-style:none} 
+table{border-collapse:collapse;border-spacing:0} 
+blockquote:before, blockquote:after, 
+q:before, q:after{content:""} 
+blockquote, q{quotes:"" ""} 
+a{color:#333;text-decoration:none;cursor:pointer}
+a:hover{color:#FF4000}
+a:active{color:#f27f7b}
+a:focus{outline:1px}
+html,body{height:100%}
+body,input,button,select,textarea,table{font:12px/1.5 "Microsoft YaHei","微软雅黑","黑体",Tahoma,Helvetica,Arial,sans-serif}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;clear:both;content:"\0020";visibility:hidden;height:0}
+*+html img{-ms-interpolation-mode:bicubic}
+.wrap{min-width:1054px}
+.col_l{float:left;display:inline}
+.col_r{float:right;display:inline}
+.grid_c1{width:1054px;margin:0 auto; overflow:hidden; height:auto;}
+.head_logo,.recom_goodslis li .thumb .flt_icon,.try_header .head_info li i,.try_header .serch-warp .ico_search,.try_header .head_info li.lines,.try_credit i,.about_try dl dt i{background:url(img/ind_bg.png) no-repeat}
+/*header*/
+.try_topbar{background:#f2f2f2;height:30px;line-height:30px;color:#6d6d6d}
+.try_topbar .emps{color:#f52648}
+.try_topbar a{margin:0 3px}
+.top_menu{float:right;display:inline}
+.try_header{background:#fff;padding:20px 0 0 0;height:65px}
+.try_header .head_logo{float:left;width:222px;height:40px}
+.try_header .head_info{float:right;margin:5px 10px 0 0}
+.try_header .head_info li{float:left;color:#555;margin-right:5px;color:#555;font:12px/40px 'Microsoft YaHei'}
+.try_header .head_info li i{width:34px;height:34px;display:inline-block;vertical-align:middle;margin-right:10px}
+.try_header .head_info li.ico-lis1 i{background-position:0 -70px}
+.try_header .head_info li.ico-lis2 i{background-position:-35px -70px}
+.try_header .head_info li.ico-lis3 i{background-position:-72px -70px}
+.try_header .head_info li.lines{background-position:-116px -65px;width:10px;height:40px;margin:0 5px}
+.try_header .serch-warp{float:right;width:240px;height:36px;background:#efefef;margin:8px 0 0 0 }
+.try_header .serch-warp .ipt_search{width:170px;height:24px;line-height:24px;padding:5px;border:0;background:#efefef;color:#8d8d8d;margin-left:10px; float:left;}
+.try_header .serch-warp .ico_search{background-color:#f8285c;background-position:-126px -70px;width:36px;height:36px;float:right;display:block;border:0;cursor:pointer}
+.try_menu{height:38px;background:#f52648}
+.try_menu .sec_menu{line-height:38px}
+.try_menu .sec_menu li{float:left}
+.try_menu .sec_menu li a{color:#fff;padding:0 50px;font:bold 14px/38px 'Microsoft YaHei';display:block;float:left}
+.try_menu .sec_menu li a.cur{background:#df1738}
+/*footer*/
+.try_footer{background:#fff; border-top:1px solid #e3e3e3; padding:30px 0 50px 0;overflow:hidden;}
+.try_lines{border-top:6px solid #ee2140}
+.about_try{overflow:hidden}
+.about_try dl{float:left;width:20%;padding-left:4%}
+.about_try dl dt{font:bold 13px/24px 'Microsoft YaHei';color:#1a1a1a}
+.about_try dl dt i{ width:23px; height:23px; display:inline-block; vertical-align:middle; margin-right:5px;}
+.about_try dl dt i.about1{ background-position:0 -46px}
+.about_try dl dt i.about2{background-position:-23px -46px}
+.about_try dl dt i.about3{background-position:-46px -46px}
+.about_try dl dt i.about4{background-position:-70px -46px}
+.about_try dl dd{height:22px;line-height:22px;overflow:hidden}
+.about_try dl dd a{color:#8a8989}
+
+.recom_goods{width:1054px;overflow:hidden}
+.recom_goodslis{width:1200px}
+.recom_goodslis li{width:180px;margin-right:13px;background:#fff;padding:10px}
+.recom_goodslis li .name{height:24px;line-height:24px;margin-top:10px;overflow:hidden;color:#575757}
+.recom_goodslis li .count{overflow:hidden;font:14px Simsun;vertical-align:middle;line-height:22px;margin-top:10px}
+.recom_goodslis li .count .num{color:#575757;vertical-align:middle}
+.recom_goodslis li .count .num strong{color:#fa3d37}
+.recom_goodslis li .name .price{color:#9d9d9d;text-decoration:line-through}
+.recom_goodslis li .name .main_name{width:80%;height:24px;overflow:hidden}
+.recom_goodslis li .thumb{position:relative;width:180px;height:180px}
+.recom_goodslis li .thumb .flt_icon{background-position:0 -164px;width:32px;height:38px;position:absolute;left:5px;top:0;display:block}
+.appbtn{background:#ee2140;color:#fff;line-height:22px;font:14px/22px 'Microsoft YaHei';padding:2px 15px;border-radius:6px;vertical-align:middle}
+.appbtn:hover{color:#fff}
+.mgt_10{margin-top:10px}
+
+.copyright{padding:20px 0;padding-left:50px;}
+.copyright a{color:#585858;margin-right:10px}
+.safe_mod{color:#585858; padding:10px 0;padding-left:50px;}
+.safe_mod a{margin-right:20px}
+.safe_mod a img{width:80px;height:30px}
+.try_media{vertical-align:middle;padding:20px 0 10px 50px}
+.try_media a{width:112px;height:30px}
+.try_media a img{width:112px;height:30px;border:1px solid #ddd;vertical-align:middle;margin-right:10px}
+.try_friend { padding:20px 0 0 50px;}
+.try_friend a{margin-right:15px}
+
+.try_credit{ overflow:hidden; margin:30px auto; }
+.try_credit li{ float:left; width:20%; padding-left:4%;font:bold 12px/30px 'Microsoft YaHei'; color:#111}
+.try_credit i{ width:49px; height:49px;  display:block;}
+.try_credit i.cred_i1{ background-position:0 -112px;}
+.try_credit i.cred_i2{ background-position:-50px -112px;}
+.try_credit i.cred_i3{ background-position:-98px -112px; margin-left:10px;}
+.try_credit i.cred_i4{ background-position:-148px -112px;margin-left:10px;}
+.try_main{ margin-bottom:30px;}
+
+.mesg_on,.mesg_off{width:18px;height:18px;display:inline-block; vertical-align:middle; margin-top:0;}
+.mesg_on{ background:url(img/msg_up.gif) no-repeat;}
+.mesg_off{ background:url(img/msg_off.gif) no-repeat;}

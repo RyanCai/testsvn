@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE configuration PUBLIC "mybatis-3-config" "mybatis-3-config.dtd" > -->
+<!DOCTYPE configuration PUBLIC   
+    "-//mybatis.org//DTD Config 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    
+<configuration>
+
+	<properties resource="dbconfig.properties">
+	</properties>
+	
+	<settings>
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<setting name="useColumnLabel" value="true" />
+		<setting name="useGeneratedKeys" value="false" />
+		<setting name="defaultExecutorType" value="SIMPLE" />
+		<setting name="defaultStatementTimeout" value="25000" />
+	</settings>
+	
+	<typeAliases>
+	<!--
+      通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean,
+      并且默认设置一个别名，默认的名字为： javabean 的首字母小写的非限定类名来作为它的别名。
+      也可在javabean 加上注解@Alias 来自定义别名， 例如： @Alias(user) 
+      <package name="com.dy.entity"/>
+		<typeAlias alias="Job" type="com.cyl.bean.pojo.SysUser" />
+       -->
+   <package name="com.cyl.bean.pojo"/>
+   
+	</typeAliases>
+	
+	<environments default="defDB">
+		<environment id="defDB">
+			<transactionManager type="jdbc" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${pool.proxy.driver}" />
+				<property name="url" value="${pool.url}" />
+				<property name="username" value="${pool.username}" />
+				<property name="password" value="${pool.password}" />
+				<property name="poolMaximumActiveConnections" value="10" />
+				<property name="poolMaximumCheckoutTime" value="120000" />
+				<property name="poolMaximumIdleConnections" value="5" />
+				<property name="poolTimeToWait" value="500" />
+				<property name="poolPingQuery" value="${pool.pingquery}" />
+				<property name="poolPingEnabled" value="${pool.pingenable}" />
+				<property name="poolPingConnectionsNotUsedFor" value="${pool.pingnotuse}" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+	<!-- 
+	   <mapper resource="com/cyl/bean/mapper/SysUserMapper.xml" />
+	     <mapper resource="com/cyl/bean/mapper/VIPBeanMapper.xml" />
+	     <package name="com.cyl.bean.mapper"/>
+	 -->
+	    <mapper resource="com/cyl/bean/mapper/SysUserMapper.xml" />
+       <mapper resource="com/cyl/bean/mapper/VIPBeanMapper.xml" />
+       <mapper resource="com/cyl/bean/mapper/ProductMapper.xml" />
+       <mapper resource="com/cyl/bean/mapper/UserDeliveryAddressMapper.xml" />
+	</mappers>
+	
+</configuration>

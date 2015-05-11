@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* 全站的提示框样式 */.msg_box{width:440px;display:none;position:absolute;vertical-align:top;z-index:1022;background-color:#efefef;border:1px solid #aaa;border-radius:5px 5px 5px 5px;box-shadow:0 0 8px rgba(0, 0, 0, 0.2);overflow:hidden}
+.msg_box .dialog_top{background-color:#efefef;border-bottom:1px solid #ddd;border-radius:5px 5px 0 0;font-weight:bold;text-align:left;padding:5px 9px 5px 12px;line-height:25px;height:25px;overflow:hidden;display:block;-moz-user-select:none;-khtml-user-select:none;user-select:none;z-index:120;color:#333;font-size:14px}
+.msg_box .dialog_top a.closebox{width:18px;height:18px;display:block;cursor:pointer;background:url(img/box_close.gif) left top;overflow:hidden;float:right;margin-top:2px}
+.msg_box .dialog_top a.closebox:hover{background-position:right top;margin-top:4px}
+.msg_box .content{clear:both;height:auto;line-height:25px;background-color:#fff;vertical-align:middle;padding:30px 25px 30px 30px;word-wrap:break-word;word-break:normal;overflow:hidden;margin:0;text-align:left}
+.msg_box .boxbut{background-color:#efefef;clear:both;text-align:right;overflow:hidden;line-height:24px;padding:4px 12px 8px 0;border-top:1px solid #ddd
+}
+.msg_box .boxbut .btn{border:1px solid #888;margin:0 0 1px 3px;color:#000000 !important;-moz-user-select:none;border-radius:3px 3px 3px 3px;cursor:pointer;display:inline-block;font-size:12px;font-family:Simsun;height:22px;line-height:22px;margin:0 10px 0 0;min-width:24px;padding:0 12px;text-align:center;text-decoration:none;vertical-align:middle}
+.msg_box .boxbut .btn:active{border-color:#7E7E7E;box-shadow:0 1px 2px rgba(0, 0, 0, 0.2) inset;outline:medium none}
+.msg_box .boxbut .btn:hover{color:#1E5494}
+.msg_box .boxbut .btn:focus{border:1px solid #0074bc}
+.movebox_bg{background-color:#aaa;z-index:1019;visibility:visible;position:absolute;width:100%;left:0;top:0;opacity:0.35;_background:url("../images/box/blank.gif");filter:alpha(opacity=35)}
+.bdselect_share_bg{position:absolute;display:none;z-index:9997}
+.bdselect_share_box .bdshare_arrow{position:absolute;margin:-4px 0 0;width:22px}
+.bdselect_share_box .bdshare_arrow *{font-family:"SimSun";overflow:hidden;font-size:12px;line-height:1.231;display:block;height:12px}
+.bdshare_popup_box .S_line1_c{color:#e8daee}
+.bdshare_popup_box .S_bg4_c{color:#fafafa}
+.bdselect_share_box{position:absolute;display:none;z-index:9998;max-width:300px;border:solid 1px #f6f6f6;box-shadow:1px 4px 6px -2px #f6f6f6;-moz-box-shadow:1px 4px 6px -2px #f6f6f6;-webkit-box-shadow:1px 4px 6px -2px #f6f6f6}
+.bdselect_share_box .selectshare-mod-triangle{display:block;position:absolute;left:14px;top:-10px}
+.bdselect_share_box .selectshare-mod-triangle .triangle-border{border-color:transparent transparent #d9d9d9 transparent;left:0}
+.bdselect_share_box .selectshare-mod-triangle .triangle-border,.bdselect_share_box .selectshare-mod-triangle .triangle-inset{left:0;top:0;width:0;height:0;font-size:0;overflow:hidden;position:absolute;border-width:5px;border-style:dashed dashed solid dashed}
+.bdselect_share_box .selectshare-mod-triangle .triangle-inset{border-color:transparent transparent #f6f6f6 transparent}
+.bdselect_share_top{height:28px;color:#626262;overflow:hidden;font-weight:bold;font-size:14px;line-height:28px;padding:0 5px}
+.bdselect_share_list{margin:0;padding:10px;background:#fff;overflow:hidden;_zoom:1}
+.bdselect_share_top .bdselect_share_dialog_close{}
+.bdselect_share_triangle{display:block;position:relative;left:19px;top:-24px;z-index:20}
+.bdselect_share_triangle .bdselect_share_border,.bdselect_share_triangle .bdselect_share_inset{left:0;top:0;width:0;height:0;font-size:0;overflow:hidden;position:absolute;border-width:12px;border-style:dashed dashed solid dashed}
+.bdselect_share_triangle .bdselect_share_border{border-color:transparent transparent #fff transparent;bottom:-1px}
+.bdselect_share_triangle .bdselect_share_inset{border-color:transparent transparent #f6f6f6 transparent}
+.bdselect_share_head{width:100%;background:#f4f4f4;height:28px}
+.bdselect_share_head span{color:#626262;line-height:28px;margin-left:5px;font-weight:bold;font-size:12px}
+.bdselect_share_content{background:#fff}
+.bdselect_share_dialog_close{background:url("../img/share/selectshare_close.png?v=1b34ee88.png") no-repeat 0 0;width:12px;height:12px;position:absolute;top:8px;right:10px;display:block;text-decoration:none;cursor:pointer}
+.bdselect_share_partners{float:left}
+
+
+
+
+
+/*邀请新手活动页面css样式*/
+/*公共样式*/
+body{background:#fff5fa}
+.title{float:left;font-size:36px;font-weight:900;color:#e5336d;margin:60px 0 14px 0}
+/*轮播位*/
+.recommend_img{height:268px;}
+.recommend_decs{margin:0 auto;width:1000px;height:247px;}
+.recommend_link{color:#696969;margin:55px auto 45px auto;width:1000px;line-height:20px;font-size:17px;text-align:center}
+.recommend_link a{color:#e5336d;cursor:pointer
+}
+.recommend_link input{margin:40px auto;width:950px;height:14px;padding:14px 0;font-size:14px;font-family:"宋体";color:#696969;text-align:center}
+.recommend_link button{width:300px;height:50px;line-height:50px;font-size:30px;font-weight:900;font-family:"黑体";background:#e5336d;padding:0;border:0;color:#fff}
+.recommend_link .description{text-align:left;line-height:30px}
+/*分享*/
+.fenxiang{width:1000px;margin:0 auto;text-align:center}
+.fenxiang .fenxiang_img{float:left;width:468px}
+.fenxiang .fenxiang_Share{float:left;text-align:center;margin-left:50px}
+
+.fenxiang_Share ul li{float:left;width:120px;height:30px;font-size:14px;line-height:30px;text-align:center;border:1px solid #d8d8d8;margin:9px 11px 0 0}
+.fenxiang_Share ul li a{font-size:14px;color:#e5336d}
+.fenxiang_Share .wx i,
+.fenxiang_Share .kj i,
+.fenxiang_Share .xl i,
+.fenxiang_Share .tx i{float:left;margin:2px -14px 0 8px;width:26px;height:24px;background:url("/resource/front/images/recommend/xingdong.png") no-repeat }
+/*邀请规则*/
+.rule{width:1000px;margin:0 auto}
+
+.rule ul li{line-height:25px;font-size:14px;font-family:"宋体";color:#696969}
+.rule ul li p{text-indent:32px}
+/*邀请记录*/
+.record{width:1000px;margin:0 auto}
+.record .title{margin:44px 0 0px 0}
+.record .reward{float:right;font-size:20px;font-weight:900;margin:71px 13px 4px 0}
+.record .reward span{color:#e5336d;font-size:30px}
+.record .record_reward{width:990px;margin:0 auto;border:1px solid #d8d8d8}
+
+.record .record_reward ul{margin:-1px 0 0 -1px;width:991px;background:#f3f3f3;border:1px solid #d8d8d8; overflow:hidden}
+.record .record_reward ul li{float:left;color:#a1a1a1;padding:5px 48px 5px 24px}
+.record .friend_name{margin:-2px 0 0 4px;float:left;width:617px;height:510px;border:1px solid #d8d8d8;background-color:#fff;position:relative}
+.record .friend_name .tishi{margin:20px 0 0 0;font-size:16px;text-align:center;color:#696969}
+.record .friend_name .gogogo{margin:92px auto 0 auto;width:180px;height:180px;background:url("img/xingdong.png") no-repeat 0 0}
+.record .friend_name2{margin:-2px 0 0 -1px;float:left;width:373px;border:1px solid #d8d8d8;background-color:#fff;height:510px}
+.record .friend_name2 ul{padding-left:24px}
+.record .friend_name2 ul li{width:373px;height:51px;background:url("img/xingdong.png") no-repeat -192px -10px}
+.record .friend_name2 .paiming{float:left;color:#e5336d;display:block;width:34px;font-size:20px;font-weight:900;text-align:center;margin:0 20px 0 2px;height:50px;line-height:55px}
+.record .friend_name2 .name{float:left;color:#696969;display:block;width:154px;height:50px;font-size:14px;text-align:center;line-height:55px}
+.record .friend_name2 .money{float:left;color:#e5336d;display:block;line-height:55px;width:89px;height:50px;font-size:16px;text-align:center}
+
+/*推荐人列表*/
+.recommend_list ul li{float:left;color:#666;width:120px;line-height:40px;text-align:center}
+.recommend_list .pay_bonus{color:#f00}
+/*分页*/
+.recommend_page{position:absolute;bottom:0;width:100%}
+.ind-head .areaz{
+position: relative;
+width: 980px;
+margin: 0 auto;}
+.friend_name { text-align:center;  }
+.friend_name li{ font:12px/34px 'Microsoft YaHei'; border-bottom:1px dashed #eee;}
+.friend_name span{display:inline-block;}
+.friend_name .names{ width:110px; display:inline-block}
+.friend_name .time1{width:110px;}
+.friend_name .time2{width:115px;}
+.friend_name .money{width:120px;}
+.friend_name .money-other{width:150px;}

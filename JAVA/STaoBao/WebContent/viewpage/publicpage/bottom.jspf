@@ -1,0 +1,32 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+
+<div class="about-links">
+	<div class="areaz">
+	<dl><dt>关于我们</dt>
+        <dd>
+        <a href="viewpage/publicpage/aboutus.jsp"  target="_self">关于我们</a>
+        <a href="javascript:viod(0)">诚聘英才</a>
+        <a href="viewpage/publicpage/contactus.jsp" target="_self">联系我们</a></dd>
+    </dl>
+	<dl><dt>帮助中心</dt>
+        <dd><a href="javascript:viod(0)" target="_self">商家答疑</a>
+        <a href="viewpage/publicpage/help.jsp"  target="_self">用户答疑</a></dd>
+    </dl>
+	<dl><dt>商务合作</dt>
+        <dd>
+        <a href="javascript:viod(0)"  target="_self">商家入驻</a>
+        <a href="viewpage/publicpage/serviceterms.jsp"  target="_self">服务条款</a>
+        <a  href="javascript:viod(0)">信用认证</a></dd>
+    </dl>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>copyright©2013-2015 RyanCai 版权所有  粤ICP备14005984号</p>
+    <p class="safe">
+    <a href=""><img src="resource/img/ff1.gif"  width="82" height="30" /></a>
+    <a href=""><img src="resource/img/ff2.gif"  width="82" height="30" /></a>
+    <a href=""><img src="resource/img/ff3.gif"  width="82" height="30" /></a>
+    </p>
+</div>

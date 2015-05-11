@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+.ind-head{background:url(../img/head1920.png) no-repeat top center;height:90px;width:100%;min-width:998px}
+.ind-head .areaz{position:relative}
+.ind-head .logo{background:url(img/ind-bg.png) 0 0 no-repeat;width:234px;height:69px;display:block;position:absolute;top:10px;left:0}
+.ind-head .topBar{height:34px;line-height:34px;text-align:right;color:#fff} 
+.ind-head .topBar a{color:#fff;margin:0px 3px}
+
+.serch-warp{width:600px;float:right}
+.wapinfo {height:32px;line-height:32px;vertical-align:middle;margin-top:10px;float:left}
+.wapinfo li{float:left;color:#fff;margin-right:10px}
+
+.try-hot,.try-infos,.appraise{width:980px;margin:0 auto;margin-bottom:0;clear:both;overflow:hidden}
+.try-hot .title,.appraise .title,.try-infos .title{width:100%;height:32px;margin:0 auto;clear:both;font:16px/32px microsoft yahei;color:#404040;font-weight:bold;padding:20px 0 10px 0}
+.try-hot .item{width:1000px;margin:0 auto}
+.try-hot .item li{float:left;width:180px;margin-right:19px}
+.try-hot .item li.item-0{position:relative}
+.try-hot .item li.item-0 .pass{position:absolute;left:0;top:0;background:url(img/ind-bg.png) -234px 0;width:40px;height:47px;display:block;color:#fff;text-align:center}
+.try-hot .item li.item-0 .pass strong{display:block}
+.try-hot .item li .thumb{width:180px;height:180px}
+.try-hot .item li .names {padding-top:5px;clear:both;height:26px;line-height:26px;overflow:hidden}
+.try-hot .item li .names .price{float:right;color:#9d9d9d;font-size:12px;text-decoration:line-through}
+.try-hot .item li .name{width:60%;display:inline-block;float:left;height:26px;line-height:26px;overflow:hidden}
+.try-hot .item li .name a{color:#575757;width:100%;display:inline-block;float:left;height:26px;line-height:26px;overflow:hidden;display:block}
+.try-hot .item li .count{width:180px;margin:0 auto;height:20px;line-height:20px}
+.try-hot .item li .count span{padding:0 5px 0 5px;float:left}
+.try-hot .item li .count span.price{font-family:Helvetica;color:#999}
+.try-hot .item li .count span.num{color:#575757}
+.try-hot .item li .btns .num strong{color:#fa3d37}
+.try-hot .item li .btns{line-height:30px}
+.try-hot .item li .appbtn{width:60px;height:23px;float:right;margin-right:2px}
+.try-hot .item li .appbtn a{width:60px;height:23px;line-height:23px;display:block;border:1px #dadada solid;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;color:#666;font-weight:normal;text-align:center;background:#fff}
+.try-hot .item li .appbtn a:hover{border:1px #f46060;background:#f46060;color:#FFF;text-decoration:none}
+.upbtn{width: 60px;height: 23px;line-height: 23px;display: block;border: 1px #dadada solid;border-radius: 3px;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;color: #666;font-weight: normal;text-align: center;background: #fff}
+em, i, cite, small{font-style:normal;font-size:12px}
+.trymod .thbot{height:30px;line-height:30px}
+.ico-lis1 i,.ico-lis2 i,.ico-lis3 i{background:url(img/ind-bg.png) no-repeat;width:32px;height:32px;display:inline-block;vertical-align:middle;margin-right:5px}
+.ico-lis1 i{background-position:-7px -74px}.ico-lis2 i{background-position:-41px -74px}.ico-lis3 i{background-position:-75px -74px}
+.mod_search{float:right;width:228px;height:37px;background:#fff;margin-top:10px;border:0}
+.ipt_search {width:171px;height:16px;line-height:17px;_line-height:13px;padding:3px;color:#888;background-color:#FFF;border:0;vertical-align:middle;margin:8px 0 0 10px}
+.ico_search{border:0;cursor:pointer;vertical-align:middle}
+.ico_search {margin:6px 0 0 10px}
+
+.menu-user{width:214px;float:right; height:30px;padding-top:10px}
+.muser1,.muser2{float:left;margin-left:14px;font:bold 14px/30px 'microsoft YaHei'}
+.muser1 a{color:#ff4869}
+.muser2 a{color:#ff7608}
+.muser1 i,.muser2 i{background:url(img/ind-bg.png) no-repeat;display:inline-block;vertical-align:middle;margin-right:5px}
+.muser1 i{background-position:-6px -114px;width:23px;height:22px}
+.muser2 i{background-position:-36px -114px;width:26px;height:20px}
+.menu_main{margin-left:20px}
+.info-user{width:590px;border:1px solid #e1e1e1;background:#fff;float:left;padding:20px}
+.info-user .conts{line-height:26px;color:#585858;margin-bottom:20px}
+.info-user .new-userIn{width:333px;height:37px;background:#2bbf8b;color:#fff;border-radius:4px;color:#fff;font:14px/37px 'microsoft YaHei';letter-spacing:1px;margin:0 auto;text-align:center;display:block}
+.info-right{float:right;width:330px}
+.info-right .info-notice{background:#f46060;color:#fff;padding:10px}
+.info-right .info-notice p,.info-right .info-tishi p{line-height:24px;font-family:simsun}
+.info-right .info-tishi{border:1px solid #e1e1e1;background:#fff;padding:10px}
+.info-right h5{font: bold 14px/30px 'microsoft YaHei'}
+.info-right .info-tishi h5{color:#404040}
+
+.head-img{width:98px;float:left;height:80px;margin-top:10px}
+.appra-lis{background:#fff;overflow:hidden;padding:20px;line-height:24px;margin-bottom:20px}
+.appra-lis .txts{width:822px}
+.appra-lis .appra-mod{border-bottom:1px dashed #eee;padding-bottom:10px;overflow:hidden}
+.appra-lis .photos{margin-top:10px}
+.appra-lis .photos li{float:left;padding:1px;border:1px solid #ccc;margin-right:10px;width:60px;height:60px}
+.userinfo{clear:both;overflow:hidden}
+.appra-lis .photos li img{margin:0;padding:0;width:60px;height:auto}
+.appra-lis .photos li a{ width:60px; height:60px; display:block; overflow:hidden;}
+
+
+.share-txt{width:940px;margin:10px auto 0 auto;padding:15px 20px}
+.share-txt .ems{color:#f46060}
+#leflo{position:fixed;bottom:330px;right:50%;margin-right:500px;width:190px; height:159px;z-index:60;_position:absolute;_top:expression(documentElement.scrollTop + "px")}

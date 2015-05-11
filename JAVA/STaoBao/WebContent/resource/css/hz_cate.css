@@ -1,0 +1,63 @@
+﻿@charset "utf-8";
+.brand-category{width:978px;height:auto;margin:15px auto 0;border:#d2d2d2 solid 1px;background-color:#FFFFFF}
+.brand-category .ks-switchable-nav{width:auto;height:70px;background-color:#f1f1f1}
+.brand-category .ks-switchable-nav li{width:88px;height:70px;float:left}
+.brand-category .ks-switchable-nav li a{text-align: center;width:88px;height:59px;padding-top:11px;display:block;color:#323232;cursor:pointer;outline:0;text-decoration:none;background:url(img/T1yXLiFbBdXXcYKPwX-1200-200.png) no-repeat -9999px -9999px #f1f1f1}
+.brand-category .ks-switchable-nav li a:hover,.brand-category .ks-switchable-nav li .brand-category-selected{color:#fe4600;outline:0;background-color:#fff}
+.brand-category .ks-switchable-nav li.brand-category-all a{background-position:-8px -138px}
+.brand-category .ks-switchable-nav li.member-overseas a{background-position:-102px -138px}
+.brand-category .ks-switchable-nav li.member-clothes a{background-position:-193px -138px}
+.brand-category .ks-switchable-nav li.member-man a{background-position:-288px -138px}
+.brand-category .ks-switchable-nav li.member-shoes a{background-position:-379px -138px}
+.brand-category .ks-switchable-nav li.member-beauty a{background-position:-468px -138px}
+.brand-category .ks-switchable-nav li.member-house a{background-position:-563px -138px}
+.brand-category .ks-switchable-nav li.member-underwear a{background-position:-655px -138px}
+.brand-category .ks-switchable-nav li.member-infant a{background-position:-744px -138px}
+.brand-category .ks-switchable-nav li.member-food a{background-position:-893px 27px}
+.brand-category .ks-switchable-nav li.member-outdoor a{background-position:-991px 27px}
+.brand-category .ks-switchable-nav li.member-digital a{background-position:-1073px 27px}
+.brand-category .ks-switchable-nav li.brand-category-all a:hover,.brand-category .ks-switchable-nav li.brand-category-all .brand-category-selected{background-position:-8px 28px}
+.brand-category .ks-switchable-nav li.member-overseas a:hover,.brand-category .ks-switchable-nav li.member-overseas .brand-category-selected{background-position:-101px 28px}
+.brand-category .ks-switchable-nav li.member-clothes a:hover,.brand-category .ks-switchable-nav li.member-clothes .brand-category-selected{background-position:-191px 29px}
+.brand-category .ks-switchable-nav li.member-man a:hover,.brand-category .ks-switchable-nav li.member-man .brand-category-selected{background-position:-286px 29px}
+.brand-category .ks-switchable-nav li.member-shoes a:hover,.brand-category .ks-switchable-nav li.member-shoes .brand-category-selected{background-position:-375px 29px}
+.brand-category .ks-switchable-nav li.member-beauty a:hover,.brand-category .ks-switchable-nav li.member-beauty .brand-category-selected{background-position:-467px 29px}
+.brand-category .ks-switchable-nav li.member-house a:hover,.brand-category .ks-switchable-nav li.member-house .brand-category-selected{background-position:-560px 30px}
+.brand-category .ks-switchable-nav li.member-underwear a:hover,.brand-category .ks-switchable-nav li.member-underwear .brand-category-selected{background-position:-652px 30px}
+.brand-category .ks-switchable-nav li.member-infant a:hover,.brand-category .ks-switchable-nav li.member-infant .brand-category-selected{background-position:-744px 30px}
+.brand-category .ks-switchable-nav li.member-food a:hover,.brand-category .ks-switchable-nav li.member-food .brand-category-selected{background-position:-898px -137px}
+.brand-category .ks-switchable-nav li.member-outdoor a:hover,.brand-category .ks-switchable-nav li.member-outdoor .brand-category-selected{background-position:-989px -137px}
+.brand-category .ks-switchable-nav li.member-digital a:hover,.brand-category .ks-switchable-nav li.member-digital .brand-category-selected{background-position:-1073px -137px}
+.brand-category .ks-switchable-content{clear:both;height:auto; background-color:#FFFFFF;}
+.brand-category .ks-switchable-content .ks-tabs-body{height:50px;text-align:left;padding-left:20px;display:none}
+.brand-category .ks-switchable-content .ks-tabs-selected{display:block}
+.brand-category .ks-switchable-content .ks-tabs-selected .current{color: #FFf;background-color: #FF4E00;padding: 3px 10px; margin:12px 5px}
+.brand-category .ks-switchable-content .ks-tabs-selected .current_day{color: #FFf;background-color: #3DC054;padding: 3px 10px; margin:12px 5px}
+.brand-category .ks-switchable-content .ks-tabs-selected .current_my{color: #FFf;background-color: #FFAD1C;padding: 3px 10px; margin:12px 5px}
+.brand-category .ks-switchable-content .ks-tabs-body a{padding:15px 15px;color:#666;display:inline-block}
+.bcate_span_l{float: left}
+.bcate_span_r{float: right;margin-right: 15px}
+.ks-tabs-panel{width:978px;height:auto;margin:0 auto;z-index:1000}
+.search_alert {color: #333;padding-left: 70px;background: url(img/ico_tip.png) no-repeat;background-position: -6px -5px;height: auto!important;height: 50px;min-height: 50px;margin-top:200px;margin-bottom:250px}
+.search_alert h4 {font-size: 14px;height: 28px;line-height: 28px}
+.c_em1, .c_em1_1 {color: #FF4E00}
+.c_clongc{width: 500px;margin: 0 auto}
+.c_clongc_400{width:500px;margin: 0 auto}
+.prompt_alert {color: #333;padding-left: 70px;margin-left: 70px;background: url(img/ico_ok.png) no-repeat;background-position: -6px -5px;height: auto!important;height: 50px;min-height: 50px;margin-top:150px;margin-bottom:50px}
+.prompt_alert h4 {font-size: 14px;height: 28px;line-height: 28px}
+.prompt_alert_qun{margin-bottom: 200px;
+border: 1px solid #FF4E00;
+height: 80px;
+text-align: center;
+line-height: 80px;
+background-color: #FFF3EE;
+font-weight: bold;
+font-size: 14px;
+color: #FF4E00;
+border-radius: 3px;
+}
+.prompt_alert_qun img{vertical-align: middle;
+margin-top: -3px;
+margin-left: 8px;
+
+}

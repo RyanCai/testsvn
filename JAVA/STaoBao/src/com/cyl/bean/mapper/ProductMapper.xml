@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.ProductMapper" >
+
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.Product" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="merchantId" property="merchantid" jdbcType="INTEGER" />
+    <result column="shopName" property="shopname" jdbcType="VARCHAR" />
+    <result column="productName" property="productname" jdbcType="VARCHAR" />
+    <result column="productDes" property="productdes" jdbcType="VARCHAR" />
+    <result column="productPosition" property="productposition" jdbcType="VARCHAR" />
+    <result column="oldPrice" property="oldprice" jdbcType="DECIMAL" />
+    <result column="productImg" property="productimg" jdbcType="VARCHAR" />
+    <result column="productKeyword" property="productkeyword" jdbcType="VARCHAR" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="testtype" property="testtype" jdbcType="INTEGER" />
+    <result column="tryPlatform" property="tryplatform" jdbcType="INTEGER" />
+    <result column="productUrl" property="producturl" jdbcType="VARCHAR" />
+    <result column="isDeliver" property="isdeliver" jdbcType="INTEGER" />
+    <result column="bonusAmount" property="bonusamount" jdbcType="VARCHAR" />
+    <result column="xiadanPrice" property="xiadanprice" jdbcType="DOUBLE" />
+    <result column="secretSignal" property="secretsignal" jdbcType="VARCHAR" />
+    <result column="phoneOrPc" property="phoneorpc" jdbcType="INTEGER" />
+    <result column="fanliPrice" property="fanliprice" jdbcType="DOUBLE" />
+    <result column="startTime" property="starttime" jdbcType="TIMESTAMP" />
+    <result column="endTime" property="endtime" jdbcType="TIMESTAMP" />
+    <result column="isfeeEnsure" property="isfeeensure" jdbcType="INTEGER" />
+    <result column="deposit" property="deposit" jdbcType="DOUBLE" />
+    <result column="sys_rate" property="sysRate" jdbcType="DOUBLE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="applyNumber" property="applynumber" jdbcType="INTEGER" />
+    <result column="getApplyNumber" property="getapplynumber" jdbcType="INTEGER" />
+    <result column="getProduct" property="getproduct" jdbcType="INTEGER" />
+    <result column="xiaOrderType" property="xiaordertype" jdbcType="INTEGER" />
+    <result column="xiaOrderRequirement" property="xiaorderrequirement" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="sys_state" property="sysState" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    id, merchantId, shopName, productName, productDes, productPosition, oldPrice, productImg, 
+    productKeyword, count, testtype, tryPlatform, productUrl, isDeliver, bonusAmount, 
+    xiadanPrice, secretSignal, phoneOrPc, fanliPrice, startTime, endTime, isfeeEnsure, 
+    deposit, sys_rate, remark, applyNumber, getApplyNumber, getProduct, xiaOrderType, 
+    xiaOrderRequirement, state, sys_state
+  </sql>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_product
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_product
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  
+  <insert id="insert" parameterType="com.cyl.bean.pojo.Product" >
+    insert into tb_product (id, merchantId, shopName, 
+      productName, productDes, productPosition, 
+      oldPrice, productImg, productKeyword, 
+      count, testtype, tryPlatform, 
+      productUrl, isDeliver, bonusAmount, 
+      xiadanPrice, secretSignal, phoneOrPc, 
+      fanliPrice, startTime, endTime, 
+      isfeeEnsure, deposit, sys_rate, 
+      remark, applyNumber, getApplyNumber, 
+      getProduct, xiaOrderType, xiaOrderRequirement, 
+      state, sys_state)
+    values (#{id,jdbcType=INTEGER}, #{merchantid,jdbcType=INTEGER}, #{shopname,jdbcType=VARCHAR}, 
+      #{productname,jdbcType=VARCHAR}, #{productdes,jdbcType=VARCHAR}, #{productposition,jdbcType=VARCHAR}, 
+      #{oldprice,jdbcType=DECIMAL}, #{productimg,jdbcType=VARCHAR}, #{productkeyword,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{testtype,jdbcType=INTEGER}, #{tryplatform,jdbcType=INTEGER}, 
+      #{producturl,jdbcType=VARCHAR}, #{isdeliver,jdbcType=INTEGER}, #{bonusamount,jdbcType=VARCHAR}, 
+      #{xiadanprice,jdbcType=DOUBLE}, #{secretsignal,jdbcType=VARCHAR}, #{phoneorpc,jdbcType=INTEGER}, 
+      #{fanliprice,jdbcType=DOUBLE}, #{starttime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP}, 
+      #{isfeeensure,jdbcType=INTEGER}, #{deposit,jdbcType=DOUBLE}, #{sysRate,jdbcType=DOUBLE}, 
+      #{remark,jdbcType=VARCHAR}, #{applynumber,jdbcType=INTEGER}, #{getapplynumber,jdbcType=INTEGER}, 
+      #{getproduct,jdbcType=INTEGER}, #{xiaordertype,jdbcType=INTEGER}, #{xiaorderrequirement,jdbcType=VARCHAR}, 
+      #{state,jdbcType=INTEGER}, #{sysState,jdbcType=INTEGER})
+  </insert>
+  
+  
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.Product" >
+    insert into tb_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="merchantid != null" >
+        merchantId,
+      </if>
+      <if test="shopname != null" >
+        shopName,
+      </if>
+      <if test="productname != null" >
+        productName,
+      </if>
+      <if test="productdes != null" >
+        productDes,
+      </if>
+      <if test="productposition != null" >
+        productPosition,
+      </if>
+      <if test="oldprice != null" >
+        oldPrice,
+      </if>
+      <if test="productimg != null" >
+        productImg,
+      </if>
+      <if test="productkeyword != null" >
+        productKeyword,
+      </if>
+      <if test="count != null" >
+        count,
+      </if>
+      <if test="testtype != null" >
+        testtype,
+      </if>
+      <if test="tryplatform != null" >
+        tryPlatform,
+      </if>
+      <if test="producturl != null" >
+        productUrl,
+      </if>
+      <if test="isdeliver != null" >
+        isDeliver,
+      </if>
+      <if test="bonusamount != null" >
+        bonusAmount,
+      </if>
+      <if test="xiadanprice != null" >
+        xiadanPrice,
+      </if>
+      <if test="secretsignal != null" >
+        secretSignal,
+      </if>
+      <if test="phoneorpc != null" >
+        phoneOrPc,
+      </if>
+      <if test="fanliprice != null" >
+        fanliPrice,
+      </if>
+      <if test="starttime != null" >
+        startTime,
+      </if>
+      <if test="endtime != null" >
+        endTime,
+      </if>
+      <if test="isfeeensure != null" >
+        isfeeEnsure,
+      </if>
+      <if test="deposit != null" >
+        deposit,
+      </if>
+      <if test="sysRate != null" >
+        sys_rate,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="applynumber != null" >
+        applyNumber,
+      </if>
+      <if test="getapplynumber != null" >
+        getApplyNumber,
+      </if>
+      <if test="getproduct != null" >
+        getProduct,
+      </if>
+      <if test="xiaordertype != null" >
+        xiaOrderType,
+      </if>
+      <if test="xiaorderrequirement != null" >
+        xiaOrderRequirement,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="sysState != null" >
+        sys_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="merchantid != null" >
+        #{merchantid,jdbcType=INTEGER},
+      </if>
+      <if test="shopname != null" >
+        #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productdes != null" >
+        #{productdes,jdbcType=VARCHAR},
+      </if>
+      <if test="productposition != null" >
+        #{productposition,jdbcType=VARCHAR},
+      </if>
+      <if test="oldprice != null" >
+        #{oldprice,jdbcType=DECIMAL},
+      </if>
+      <if test="productimg != null" >
+        #{productimg,jdbcType=VARCHAR},
+      </if>
+      <if test="productkeyword != null" >
+        #{productkeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null" >
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="testtype != null" >
+        #{testtype,jdbcType=INTEGER},
+      </if>
+      <if test="tryplatform != null" >
+        #{tryplatform,jdbcType=INTEGER},
+      </if>
+      <if test="producturl != null" >
+        #{producturl,jdbcType=VARCHAR},
+      </if>
+      <if test="isdeliver != null" >
+        #{isdeliver,jdbcType=INTEGER},
+      </if>
+      <if test="bonusamount != null" >
+        #{bonusamount,jdbcType=VARCHAR},
+      </if>
+      <if test="xiadanprice != null" >
+        #{xiadanprice,jdbcType=DOUBLE},
+      </if>
+      <if test="secretsignal != null" >
+        #{secretsignal,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneorpc != null" >
+        #{phoneorpc,jdbcType=INTEGER},
+      </if>
+      <if test="fanliprice != null" >
+        #{fanliprice,jdbcType=DOUBLE},
+      </if>
+      <if test="starttime != null" >
+        #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isfeeensure != null" >
+        #{isfeeensure,jdbcType=INTEGER},
+      </if>
+      <if test="deposit != null" >
+        #{deposit,jdbcType=DOUBLE},
+      </if>
+      <if test="sysRate != null" >
+        #{sysRate,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="applynumber != null" >
+        #{applynumber,jdbcType=INTEGER},
+      </if>
+      <if test="getapplynumber != null" >
+        #{getapplynumber,jdbcType=INTEGER},
+      </if>
+      <if test="getproduct != null" >
+        #{getproduct,jdbcType=INTEGER},
+      </if>
+      <if test="xiaordertype != null" >
+        #{xiaordertype,jdbcType=INTEGER},
+      </if>
+      <if test="xiaorderrequirement != null" >
+        #{xiaorderrequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysState != null" >
+        #{sysState,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyl.bean.pojo.Product" >
+    update tb_product
+    <set >
+      <if test="merchantid != null" >
+        merchantId = #{merchantid,jdbcType=INTEGER},
+      </if>
+      <if test="shopname != null" >
+        shopName = #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        productName = #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="productdes != null" >
+        productDes = #{productdes,jdbcType=VARCHAR},
+      </if>
+      <if test="productposition != null" >
+        productPosition = #{productposition,jdbcType=VARCHAR},
+      </if>
+      <if test="oldprice != null" >
+        oldPrice = #{oldprice,jdbcType=DECIMAL},
+      </if>
+      <if test="productimg != null" >
+        productImg = #{productimg,jdbcType=VARCHAR},
+      </if>
+      <if test="productkeyword != null" >
+        productKeyword = #{productkeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null" >
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="testtype != null" >
+        testtype = #{testtype,jdbcType=INTEGER},
+      </if>
+      <if test="tryplatform != null" >
+        tryPlatform = #{tryplatform,jdbcType=INTEGER},
+      </if>
+      <if test="producturl != null" >
+        productUrl = #{producturl,jdbcType=VARCHAR},
+      </if>
+      <if test="isdeliver != null" >
+        isDeliver = #{isdeliver,jdbcType=INTEGER},
+      </if>
+      <if test="bonusamount != null" >
+        bonusAmount = #{bonusamount,jdbcType=VARCHAR},
+      </if>
+      <if test="xiadanprice != null" >
+        xiadanPrice = #{xiadanprice,jdbcType=DOUBLE},
+      </if>
+      <if test="secretsignal != null" >
+        secretSignal = #{secretsignal,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneorpc != null" >
+        phoneOrPc = #{phoneorpc,jdbcType=INTEGER},
+      </if>
+      <if test="fanliprice != null" >
+        fanliPrice = #{fanliprice,jdbcType=DOUBLE},
+      </if>
+      <if test="starttime != null" >
+        startTime = #{starttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endtime != null" >
+        endTime = #{endtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isfeeensure != null" >
+        isfeeEnsure = #{isfeeensure,jdbcType=INTEGER},
+      </if>
+      <if test="deposit != null" >
+        deposit = #{deposit,jdbcType=DOUBLE},
+      </if>
+      <if test="sysRate != null" >
+        sys_rate = #{sysRate,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="applynumber != null" >
+        applyNumber = #{applynumber,jdbcType=INTEGER},
+      </if>
+      <if test="getapplynumber != null" >
+        getApplyNumber = #{getapplynumber,jdbcType=INTEGER},
+      </if>
+      <if test="getproduct != null" >
+        getProduct = #{getproduct,jdbcType=INTEGER},
+      </if>
+      <if test="xiaordertype != null" >
+        xiaOrderType = #{xiaordertype,jdbcType=INTEGER},
+      </if>
+      <if test="xiaorderrequirement != null" >
+        xiaOrderRequirement = #{xiaorderrequirement,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="sysState != null" >
+        sys_state = #{sysState,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateByPrimaryKey" parameterType="Product" >
+    update tb_product
+    set merchantId = #{merchantid,jdbcType=INTEGER},
+      shopName = #{shopname,jdbcType=VARCHAR},
+      productName = #{productname,jdbcType=VARCHAR},
+      productDes = #{productdes,jdbcType=VARCHAR},
+      productPosition = #{productposition,jdbcType=VARCHAR},
+      oldPrice = #{oldprice,jdbcType=DECIMAL},
+      productImg = #{productimg,jdbcType=VARCHAR},
+      productKeyword = #{productkeyword,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      testtype = #{testtype,jdbcType=INTEGER},
+      tryPlatform = #{tryplatform,jdbcType=INTEGER},
+      productUrl = #{producturl,jdbcType=VARCHAR},
+      isDeliver = #{isdeliver,jdbcType=INTEGER},
+      bonusAmount = #{bonusamount,jdbcType=VARCHAR},
+      xiadanPrice = #{xiadanprice,jdbcType=DOUBLE},
+      secretSignal = #{secretsignal,jdbcType=VARCHAR},
+      phoneOrPc = #{phoneorpc,jdbcType=INTEGER},
+      fanliPrice = #{fanliprice,jdbcType=DOUBLE},
+      startTime = #{starttime,jdbcType=TIMESTAMP},
+      endTime = #{endtime,jdbcType=TIMESTAMP},
+      isfeeEnsure = #{isfeeensure,jdbcType=INTEGER},
+      deposit = #{deposit,jdbcType=DOUBLE},
+      sys_rate = #{sysRate,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      applyNumber = #{applynumber,jdbcType=INTEGER},
+      getApplyNumber = #{getapplynumber,jdbcType=INTEGER},
+      getProduct = #{getproduct,jdbcType=INTEGER},
+      xiaOrderType = #{xiaordertype,jdbcType=INTEGER},
+      xiaOrderRequirement = #{xiaorderrequirement,jdbcType=VARCHAR},
+      state = #{state,jdbcType=INTEGER},
+      sys_state = #{sysState,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+   <!-- 查询数据条数 -->
+  <select id="selectCount" parameterType="Product" resultType="int">
+   select count(*) from  tb_product where 1=1
+       <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+       <if test="merchantid &gt; 0" >
+       and  merchantId = #{merchantid,jdbcType=INTEGER}
+      </if>
+      <if test="shopname != null" >
+        and shopName = #{shopname,jdbcType=VARCHAR}
+      </if>
+      <if test="productname != null" >
+        and productName = #{productname,jdbcType=VARCHAR}
+      </if>
+      <if test="productdes != null" >
+        and productDes = #{productdes,jdbcType=VARCHAR}
+      </if>
+      <if test="productposition != null" >
+       and  productPosition = #{productposition,jdbcType=VARCHAR}
+      </if>
+      <if test="oldprice != null" >
+        and oldPrice = #{oldprice,jdbcType=DECIMAL}
+      </if>
+      <if test="productimg != null" >
+        and productImg = #{productimg,jdbcType=VARCHAR}
+      </if>
+      <if test="productkeyword != null" >
+        and productKeyword = #{productkeyword,jdbcType=VARCHAR}
+      </if>
+      <if test="count &gt; 0" >
+        and count = #{count,jdbcType=INTEGER}
+      </if>
+      <if test="testtype &gt; 0" >
+        and testtype = #{testtype,jdbcType=INTEGER}
+      </if>
+      <if test="tryplatform &gt; 0" >
+        and tryPlatform = #{tryplatform,jdbcType=INTEGER}
+      </if>
+      <if test="producturl != null" >
+        and productUrl = #{producturl,jdbcType=VARCHAR}
+      </if>
+      <if test="isdeliver &gt; 0" >
+        and isDeliver = #{isdeliver,jdbcType=INTEGER}
+      </if>
+      <if test="bonusamount != null" >
+        bonusAmount = #{bonusamount,jdbcType=VARCHAR}
+      </if>
+      <if test="xiadanprice &gt; 0.0" >
+        and xiadanPrice = #{xiadanprice,jdbcType=DOUBLE}
+      </if>
+      <if test="secretsignal != null" >
+        and secretSignal = #{secretsignal,jdbcType=VARCHAR}
+      </if>
+      <if test="phoneorpc &gt; 0" >
+        and phoneOrPc = #{phoneorpc,jdbcType=INTEGER}
+      </if>
+      <if test="fanliprice &gt; 0.0" >
+        and fanliPrice = #{fanliprice,jdbcType=DOUBLE}
+      </if>
+      <if test="starttime != null" >
+        and startTime = #{starttime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="endtime != null" >
+        and endTime = #{endtime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="isfeeensure &gt; 0" >
+        and isfeeEnsure = #{isfeeensure,jdbcType=INTEGER}
+      </if>
+      <if test="deposit &gt; 0.0" >
+        and deposit = #{deposit,jdbcType=DOUBLE}
+      </if>
+      <if test="sysRate &gt; 0.0" >
+       and  sys_rate = #{sysRate,jdbcType=DOUBLE}
+      </if>
+      <if test="remark != null" >
+       and  remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="applynumber &gt; 0" >
+        and applyNumber = #{applynumber,jdbcType=INTEGER}
+      </if>
+      <if test="getapplynumber &gt; 0" >
+        and getApplyNumber = #{getapplynumber,jdbcType=INTEGER}
+      </if>
+      <if test="getproduct &gt; 0" >
+       and  getProduct = #{getproduct,jdbcType=INTEGER}
+      </if>
+      <if test="xiaordertype &gt; 0" >
+       and  xiaOrderType = #{xiaordertype,jdbcType=INTEGER}
+      </if>
+      <if test="xiaorderrequirement != null" >
+        and xiaOrderRequirement = #{xiaorderrequirement,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+       and  state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+       and  sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+  
+  
+  </select>
+  
+  <select id="selectList" parameterType="Product" resultMap="BaseResultMap">
+   select * from  tb_product where 1=1
+  <if test="id &gt; 0" >
+        and id = #{id,jdbcType=INTEGER}
+      </if>
+       <if test="merchantid &gt; 0" >
+       and  merchantId = #{merchantid,jdbcType=INTEGER}
+      </if>
+      <if test="shopname != null" >
+        and shopName = #{shopname,jdbcType=VARCHAR}
+      </if>
+      <if test="productname != null" >
+        and productName = #{productname,jdbcType=VARCHAR}
+      </if>
+      <if test="productdes != null" >
+        and productDes = #{productdes,jdbcType=VARCHAR}
+      </if>
+      <if test="productposition != null" >
+       and  productPosition = #{productposition,jdbcType=VARCHAR}
+      </if>
+      <if test="oldprice != null" >
+        and oldPrice = #{oldprice,jdbcType=DECIMAL}
+      </if>
+      <if test="productimg != null" >
+        and productImg = #{productimg,jdbcType=VARCHAR}
+      </if>
+      <if test="productkeyword != null" >
+        and productKeyword = #{productkeyword,jdbcType=VARCHAR}
+      </if>
+      <if test="count &gt; 0" >
+        and count = #{count,jdbcType=INTEGER}
+      </if>
+      <if test="testtype &gt; 0" >
+        and testtype = #{testtype,jdbcType=INTEGER}
+      </if>
+      <if test="tryplatform &gt; 0" >
+        and tryPlatform = #{tryplatform,jdbcType=INTEGER}
+      </if>
+      <if test="producturl != null" >
+        and productUrl = #{producturl,jdbcType=VARCHAR}
+      </if>
+      <if test="isdeliver &gt; 0" >
+        and isDeliver = #{isdeliver,jdbcType=INTEGER}
+      </if>
+      <if test="bonusamount != null" >
+        bonusAmount = #{bonusamount,jdbcType=VARCHAR}
+      </if>
+      <if test="xiadanprice &gt; 0.0" >
+        and xiadanPrice = #{xiadanprice,jdbcType=DOUBLE}
+      </if>
+      <if test="secretsignal != null" >
+        and secretSignal = #{secretsignal,jdbcType=VARCHAR}
+      </if>
+      <if test="phoneorpc &gt; 0" >
+        and phoneOrPc = #{phoneorpc,jdbcType=INTEGER}
+      </if>
+      <if test="fanliprice &gt; 0.0" >
+        and fanliPrice = #{fanliprice,jdbcType=DOUBLE}
+      </if>
+      <if test="starttime != null" >
+        and startTime = #{starttime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="endtime != null" >
+        and endTime = #{endtime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="isfeeensure &gt; 0" >
+        and isfeeEnsure = #{isfeeensure,jdbcType=INTEGER}
+      </if>
+      <if test="deposit &gt; 0.0" >
+        and deposit = #{deposit,jdbcType=DOUBLE}
+      </if>
+      <if test="sysRate &gt; 0.0" >
+       and  sys_rate = #{sysRate,jdbcType=DOUBLE}
+      </if>
+      <if test="remark != null" >
+       and  remark = #{remark,jdbcType=VARCHAR}
+      </if>
+      <if test="applynumber &gt; 0" >
+        and applyNumber = #{applynumber,jdbcType=INTEGER}
+      </if>
+      <if test="getapplynumber &gt; 0" >
+        and getApplyNumber = #{getapplynumber,jdbcType=INTEGER}
+      </if>
+      <if test="getproduct &gt; 0" >
+       and  getProduct = #{getproduct,jdbcType=INTEGER}
+      </if>
+      <if test="xiaordertype &gt; 0" >
+       and  xiaOrderType = #{xiaordertype,jdbcType=INTEGER}
+      </if>
+      <if test="xiaorderrequirement != null" >
+        and xiaOrderRequirement = #{xiaorderrequirement,jdbcType=VARCHAR}
+      </if>
+      <if test="state &gt; 0" >
+       and  state = #{state,jdbcType=INTEGER}
+      </if>
+      <if test="sysState &gt; 0" >
+       and  sys_state = #{sysState,jdbcType=INTEGER}
+      </if>
+      order by id desc 
+      <if test=" pageSize!=0" >
+         limit #{offset ,jdbcType=INTEGER},#{pageSize ,jdbcType=INTEGER}
+      </if>
+  </select>
+  
+  
+</mapper>

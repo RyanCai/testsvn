@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyl.Idao.ShopWebsiteAccountMapper" >
+  <resultMap id="BaseResultMap" type="com.cyl.bean.pojo.ShopWebsiteAccount" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="swaName" property="swaname" jdbcType="VARCHAR" />
+    <result column="swaAccount" property="swaaccount" jdbcType="VARCHAR" />
+    <result column="auditstate" property="auditstate" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="systate" property="systate" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, swaName, swaAccount, auditstate, state, systate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_shopwebsiteaccount
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_shopwebsiteaccount
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cyl.bean.pojo.ShopWebsiteAccount" >
+    insert into tb_shopwebsiteaccount (id, userid, swaName, 
+      swaAccount, auditstate, state, 
+      systate)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{swaname,jdbcType=VARCHAR}, 
+      #{swaaccount,jdbcType=VARCHAR}, #{auditstate,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
+      #{systate,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyl.bean.pojo.ShopWebsiteAccount" >
+    insert into tb_shopwebsiteaccount
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="swaname != null" >
+        swaName,
+      </if>
+      <if test="swaaccount != null" >
+        swaAccount,
+      </if>
+      <if test="auditstate != null" >
+        auditstate,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="systate != null" >
+        systate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="swaname != null" >
+        #{swaname,jdbcType=VARCHAR},
+      </if>
+      <if test="swaaccount != null" >
+        #{swaaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="auditstate != null" >
+        #{auditstate,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="systate != null" >
+        #{systate,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyl.bean.pojo.ShopWebsiteAccount" >
+    update tb_shopwebsiteaccount
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="swaname != null" >
+        swaName = #{swaname,jdbcType=VARCHAR},
+      </if>
+      <if test="swaaccount != null" >
+        swaAccount = #{swaaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="auditstate != null" >
+        auditstate = #{auditstate,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="systate != null" >
+        systate = #{systate,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyl.bean.pojo.ShopWebsiteAccount" >
+    update tb_shopwebsiteaccount
+    set userid = #{userid,jdbcType=INTEGER},
+      swaName = #{swaname,jdbcType=VARCHAR},
+      swaAccount = #{swaaccount,jdbcType=VARCHAR},
+      auditstate = #{auditstate,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      systate = #{systate,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
